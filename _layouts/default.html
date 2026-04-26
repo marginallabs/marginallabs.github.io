@@ -27,48 +27,28 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-inner">
-      <a class="sidebar-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="sidebar-nav">
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/blog/' | relative_url }}">Blog</a>
       </nav>
-      <div class="sidebar-bottom">
-        <a class="sidebar-contact" href="mailto:{{ site.email }}">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span>{{ site.email }}</span>
-        </a>
-        <p class="sidebar-copyright">&copy; {{ 'now' | date: "%Y" }} Marginal Lab</p>
-      </div>
     </div>
-  </aside>
-
-  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <main class="main-content">
+  </header>
+  <main class="page-content">
     <div class="wrapper">
       {{ content }}
     </div>
   </main>
-  <script>
-  (function() {
-    var toggle = document.getElementById('sidebar-toggle');
-    var sidebar = document.getElementById('sidebar');
-    toggle.addEventListener('click', function() {
-      sidebar.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-    document.addEventListener('click', function(e) {
-      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
-        sidebar.classList.remove('open');
-        toggle.classList.remove('open');
-      }
-    });
-  })();
-  </script>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-contact">
+        <a href="mailto:{{ site.email }}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+      </div>
+      <p class="footer-text">&copy; {{ 'now' | date: "%Y" }} Marginal Lab</p>
+    </div>
+  </footer>
 </body>
 </html>
