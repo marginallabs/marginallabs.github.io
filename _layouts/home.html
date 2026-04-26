@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="home">
+  <div class="home-hero">
+    <h1 class="lab-title">Marginal Lab</h1>
+    <p class="lab-tagline">Economics thinking at the edge.</p>
+    <p class="lab-description">
+      A blog exploring economic ideas, econometrics, and the logic behind
+      everyday decisions.
+    </p>
+  </div>
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    {% for post in site.posts limit:5 %}
+      <article class="blog-list-item">
+        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+    {% if site.posts.size == 0 %}
+      <p>No posts yet. Stay tuned!</p>
+    {% endif %}
+    {% if site.posts.size > 5 %}
+      <p class="more-link"><a href="{{ '/blog/' | relative_url }}">See all posts &rarr;</a></p>
+    {% endif %}
+  </section>
+</div>

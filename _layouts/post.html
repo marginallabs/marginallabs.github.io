@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% if page.categories %}
+        <span class="post-categories">
+          {% for cat in page.categories %}
+            <span class="category-tag">{{ cat }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+    {% if page.abstract %}
+      <p class="post-abstract">{{ page.abstract }}</p>
+    {% endif %}
+  </header>
+  {% if content contains '<h2' or content contains '<h3' %}
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ul id="toc-list"></ul>
+  </nav>
+  {% endif %}
+  <div class="post-content">
+  {{ content }}
+  </div>
+  <script>
+  (function() {
+    var content = document.querySelector('.post-content');
+    if (!content) return;
+    var headers = content.querySelectorAll('h1:not(.post-title), h2, h3');
+    if (headers.length === 0) return;
+    var tocList = document.getElementById('toc-list');
+    if (!tocList) return;
+    headers.forEach(function(h, i) {
+      if (!h.id) h.id = 'sec-' + i;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H1') li.classList.add('toc-h1');
+      if (h.tagName === 'H2') li.classList.add('toc-h2');
+      if (h.tagName === 'H3') li.classList.add('toc-h3');
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+  })();
+  </script>
+  <footer class="post-footer">
+    <hr>
+    <p class="post-nav">
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </p>
+  </footer>
+</article>

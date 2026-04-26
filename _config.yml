@@ -1,0 +1,36 @@
+title: Marginal Lab
+email: marginallab@proton.me
+description: >-
+  Marginal Lab — Economics thinking at the edge.
+  Exploring economics, econometrics, and the logic behind everyday decisions.
+baseurl: ""
+url: "https://marginallab.github.io"
+author: Marginal Lab
+
+markdown: kramdown
+kramdown:
+  math_engine: null
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+header_pages:
+  - _pages/about.md
+  - _pages/blog.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+
+include:
+  - _pages
