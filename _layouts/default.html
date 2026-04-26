@@ -60,10 +60,12 @@
     var sidebar = document.getElementById('sidebar');
     toggle.addEventListener('click', function() {
       sidebar.classList.toggle('open');
+      toggle.classList.toggle('open');
     });
     document.addEventListener('click', function(e) {
       if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
         sidebar.classList.remove('open');
+        toggle.classList.remove('open');
       }
     });
   })();

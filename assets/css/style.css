@@ -139,23 +139,38 @@ body {
 .sidebar-toggle {
   display: none;
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  top: 0.8rem;
+  left: 0.8rem;
   z-index: 200;
   background: var(--color-accent);
   border: none;
-  border-radius: 4px;
-  padding: 0.5rem;
+  border-radius: 6px;
+  padding: 0.6rem 0.55rem;
   cursor: pointer;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  -webkit-tap-highlight-color: transparent;
 }
 .sidebar-toggle span {
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 22px;
+  height: 2.5px;
   background: #fff;
-  border-radius: 1px;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.sidebar-toggle.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.sidebar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.sidebar-toggle.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* --- Home Hero --- */
