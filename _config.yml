@@ -4,7 +4,7 @@ description: >-
   Marginal Lab — Economics thinking at the edge.
   Exploring economics, econometrics, and the logic behind everyday decisions.
 baseurl: ""
-url: "https://marginallab.github.io"
+url: "https://marginallabs.github.io"
 author: Marginal Lab
 
 markdown: kramdown
