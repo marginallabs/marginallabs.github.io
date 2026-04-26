@@ -319,7 +319,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   font-style: italic;
   color: var(--color-text-light);
   font-size: 0.95rem;
-  margin: 0.8em 0 0;
+  margin: 0.8em 0 1.5em;
   padding: 0.8em 1em;
   border-left: 3px solid var(--color-accent);
   background: var(--color-bg-alt);
