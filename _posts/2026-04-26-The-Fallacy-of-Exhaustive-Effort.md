@@ -4,10 +4,9 @@ title: "The Fallacy of Exhaustive Effort: Why Leaving No Stone Unturned Can Bury
 date: 2026-04-26
 categories: [economics, fallacy]
 abstract: "If satisfying all conditions for an optimal outcome is good, then satisfying as many as possible must be second best. This reasoning is false. When a constraint prevents one condition from being met, the remaining conditions are no longer individually desirable. Satisfying them can worsen the outcome. Drawing on the theory of the second best, we show that constrained optima require violating the unconstrained conditions. Doing more of a good thing can push you further from the optimum."
+pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort.pdf
 ---
 
-
-[Download PDF]({{ site.baseurl }}/assets/files/The-Fallacy-of-Exhaustive-Effort.pdf){:.pdf-download}
 
 # The Prevailing Intuition
 
