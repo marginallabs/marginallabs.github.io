@@ -12,4 +12,4 @@ This blog applies that lens to economics, policy, and everyday decisions. Expect
 
 ## Contacts
 
-**Email:** marginallab@proton.me
+**Email:** [marginallab@proton.me](mailto:marginallab@proton.me)
