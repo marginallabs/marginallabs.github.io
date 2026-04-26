@@ -241,6 +241,23 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   margin-left: 3em;
 }
 
+/* --- PDF Download --- */
+.pdf-download {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  padding: 0.4em 1em;
+  border: 1px solid var(--color-accent);
+  border-radius: 3px;
+  color: var(--color-accent);
+  margin-bottom: 1em;
+}
+.pdf-download:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-bottom: none;
+}
+
 /* --- Post Content Spacing --- */
 .post-content h1 {
   margin-top: 3em;

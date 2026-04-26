@@ -7,6 +7,8 @@ abstract: "If satisfying all conditions for an optimal outcome is good, then sat
 ---
 
 
+[Download PDF]({{ site.baseurl }}/assets/files/The-Fallacy-of-Exhaustive-Effort.pdf){:.pdf-download}
+
 # The Prevailing Intuition
 
 We always believe we should *leave no stone unturned* when we pursue our
