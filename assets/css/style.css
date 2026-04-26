@@ -275,7 +275,10 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .post-date {
   color: var(--color-text-light);
   font-size: 0.85rem;
-  margin-right: 1em;
+  display: block;
+}
+.post-title-link {
+  font-size: 1.05rem;
 }
 .post-excerpt {
   font-family: var(--font-body);

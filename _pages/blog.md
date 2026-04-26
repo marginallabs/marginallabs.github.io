@@ -26,7 +26,7 @@ permalink: /blog/
 {% for post in site.posts %}
   <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}">
     <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     {% if post.categories %}
       <span class="post-category-badges">
         {% for cat in post.categories %}<span class="category-tag">{{ cat }}</span>{% endfor %}
