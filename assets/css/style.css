@@ -315,6 +315,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   font-size: 0.8rem;
 }
 .post-footer { margin-top: 2em; }
+#disqus_thread { margin-top: 3em; }
 .post-abstract {
   font-style: italic;
   color: var(--color-text-light);
