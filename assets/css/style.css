@@ -466,6 +466,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 
 /* --- Post --- */
 .post { padding: 2rem 0 3rem; }
+.post-content { width: 100%; overflow: hidden; }
 .post-header { margin-bottom: 1.5em; }
 .post-title {
   font-size: 2rem;
