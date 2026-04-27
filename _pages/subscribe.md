@@ -31,40 +31,52 @@ permalink: /subscribe/
         <tr>
           <th>Reader</th>
           <th>Free</th>
-          <th>Account</th>
+          <th>Sign-up</th>
+          <th>Open Source</th>
+          <th>Offline</th>
           <th>Platform</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><a href="https://feedly.com" target="_blank">Feedly</a></td>
-          <td>Yes</td>
-          <td>Yes</td>
-          <td>Web, iOS, Android</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
-          <td>Yes</td>
-          <td>Yes</td>
-          <td>Web, iOS, Android</td>
-        </tr>
-        <tr>
           <td><a href="https://netnewswire.com" target="_blank">NetNewsWire</a></td>
-          <td>Yes</td>
-          <td>No</td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
           <td>macOS, iOS</td>
         </tr>
         <tr>
-          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>iOS, macOS</td>
+          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>Android</td>
         </tr>
         <tr>
-          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>Android</td>
+          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>macOS, iOS</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>Web, iOS, Android</td>
+        </tr>
+        <tr>
+          <td><a href="https://feedly.com" target="_blank">Feedly</a></td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>Web, iOS, Android</td>
         </tr>
       </tbody>
     </table>
