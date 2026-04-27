@@ -132,6 +132,36 @@
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
+
+  // Scroll fade-in for sections
+  (function() {
+    var targets = [];
+    document.querySelectorAll('.post-content, .page-content .page, .home .recent-posts').forEach(function(container) {
+      if (!container) return;
+      var child = container.firstElementChild;
+      while (child) {
+        targets.push(child);
+        child = child.nextElementSibling;
+      }
+    });
+    document.querySelectorAll('.home-hero, .blog-list-item').forEach(function(el) {
+      targets.push(el);
+    });
+    targets.forEach(function(el) { el.classList.add('fade-in'); });
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(function(el) { observer.observe(el); });
+    } else {
+      targets.forEach(function(el) { el.classList.add('visible'); });
+    }
+  })();
   </script>
 </body>
 </html>

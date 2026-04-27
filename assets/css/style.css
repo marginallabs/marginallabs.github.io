@@ -175,6 +175,17 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .sidebar-contact span { word-break: break-all; }
 
 
+/* --- Scroll Fade-In --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(1.2em);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* --- Home Hero --- */
 .home-hero {
   padding: 4rem 0 2rem;
