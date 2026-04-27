@@ -238,6 +238,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   font-family: var(--font-heading);
   font-size: 0.85rem;
   color: var(--color-text-light);
+  margin-left: auto;
 }
 .rss-subscribe svg { flex-shrink: 0; }
 .rss-subscribe a {
