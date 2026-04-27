@@ -111,6 +111,14 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   transition: color 0.15s;
 }
 .site-nav a:hover { color: var(--color-accent); }
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-light) !important;
+  border-bottom: none !important;
+  transition: color 0.15s;
+}
+.rss-link:hover { color: var(--color-accent) !important; }
 
 /* --- Sidebar (mobile only) --- */
 .sidebar {
