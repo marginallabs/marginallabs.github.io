@@ -10,7 +10,7 @@ author: Marginal Lab
 markdown: kramdown
 kramdown:
   math_engine: null
-theme: minima
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
