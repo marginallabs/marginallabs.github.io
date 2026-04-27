@@ -33,7 +33,7 @@ permalink: /subscribe/
           <th>Free</th>
           <th>No Sign-up</th>
           <th>Open Source</th>
-          <th>Offline <span class="info-trigger" tabindex="0">&#9432;</span><span class="info-box">Articles are saved locally so you can read without an internet connection.</span></th>
+          <th>Offline <span class="info-trigger" tabindex="0">&#9432;</span><span class="info-box">Articles are saved locally<br>for offline reading.</span></th>
           <th>Platform</th>
         </tr>
       </thead>
