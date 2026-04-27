@@ -229,11 +229,15 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   font-family: var(--font-heading);
   font-size: 0.85rem;
   color: var(--color-text-light);
-  border-bottom: none !important;
-  transition: color 0.15s;
   margin-bottom: 1em;
 }
-.rss-subscribe:hover { color: var(--color-accent); }
+.rss-subscribe svg { flex-shrink: 0; }
+.rss-subscribe a {
+  color: var(--color-text-light);
+  border-bottom: none !important;
+  transition: color 0.15s;
+}
+.rss-subscribe a:hover { color: var(--color-accent); }
 .search-box {
   position: relative;
   margin-bottom: 1.5em;
