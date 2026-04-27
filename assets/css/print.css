@@ -1,0 +1,79 @@
+@media print {
+  /* Hide non-content elements */
+  .site-header,
+  .sidebar,
+  .sidebar-overlay,
+  .sidebar-toggle,
+  .progress-bar,
+  .back-to-top,
+  .share-bar,
+  .theme-toggle,
+  .lightbox-overlay,
+  .post-nav,
+  .toc { display: none !important; }
+
+  /* Reset backgrounds and colors */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  .post,
+  .page,
+  .page-content {
+    background: #fff !important;
+  }
+
+  /* Content width for print */
+  .wrapper { max-width: 100%; padding: 0; }
+  .post-content { max-width: 100%; }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+  .post-title { font-size: 18pt; margin-bottom: 0.3em; }
+  .post-meta { font-size: 10pt; color: #444 !important; border-bottom: 0.5pt solid #999; padding-bottom: 6pt; margin-bottom: 12pt; }
+  .post-abstract { font-size: 10pt; border-left: 2pt solid #000; background: none !important; color: #333 !important; padding: 6pt 10pt; }
+
+  /* Links: show URL for external links */
+  a { color: #000 !important; text-decoration: underline; border-bottom: none !important; }
+  .post-content a[href]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  .post-content a[href^="#"]:after,
+  .post-content a[href^="javascript:"]:after { content: ""; }
+  .category-tag { border: 0.5pt solid #000; background: none !important; color: #000 !important; }
+
+  /* Figures */
+  img { page-break-inside: avoid; max-width: 100% !important; }
+  figure { margin: 12pt 0; }
+  .figure-caption { font-size: 9pt; color: #444 !important; }
+
+  /* Code blocks */
+  .highlight { background: #f5f5f5 !important; border: 0.5pt solid #ccc; font-size: 9pt; }
+  pre, code { font-size: 9pt; }
+
+  /* Math: ensure MathJax renders properly */
+  .MathJax { page-break-inside: avoid; }
+
+  /* Footer */
+  .site-footer {
+    background: none !important;
+    border-top: 0.5pt solid #999;
+    margin-top: 24pt;
+    padding: 8pt 0;
+  }
+  .footer-text { font-size: 8pt; color: #666 !important; }
+
+  /* Remove fade-in animations */
+  .fade-in { opacity: 1 !important; transform: none !important; }
+
+  /* PDF download button */
+  .pdf-download { display: none !important; }
+
+  /* Series nav */
+  .series-badge { border: 0.5pt solid #000; background: none !important; color: #000 !important; }
+  .series-nav { border: 0.5pt solid #999; background: none !important; }
+  .series-nav li.current { font-weight: bold; }
+}

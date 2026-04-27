@@ -697,6 +697,93 @@ img.figure-img {
 }
 
 /* --- Responsive --- */
+/* --- 404 Page --- */
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.not-found-code {
+  font-size: 6rem;
+  color: var(--color-accent);
+  margin-bottom: 0.2em;
+  line-height: 1;
+}
+.not-found-message {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin-bottom: 0.3em;
+}
+.not-found-hint {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: 1.5em;
+}
+.not-found-home {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  padding: 0.6em 1.4em;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border-bottom: none !important;
+  transition: opacity 0.15s;
+}
+.not-found-home:hover { opacity: 0.85; }
+
+/* --- Related Posts --- */
+.related-posts {
+  margin: 2em 0 0;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--color-border);
+}
+.related-posts-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8em;
+}
+.related-posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.related-posts-list li {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--color-bg-alt);
+}
+.related-posts-list li:last-child { border-bottom: none; }
+.related-post-link {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+  display: block;
+}
+.related-post-meta {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 0.2em;
+}
+
+/* --- Code Blocks (base styling, colors in syntax.css) --- */
+pre, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+code { font-size: 0.88em; background: var(--color-bg-alt); padding: 0.15em 0.4em; border-radius: 3px; }
+pre { margin: 1em 0; overflow-x: auto; }
+pre code { background: none; padding: 0; font-size: 0.9rem; border-radius: 0; }
+
+/* --- Responsive --- */
 @media (max-width: 600px) {
   /* Hide desktop header on mobile */
   .site-header { display: none; }

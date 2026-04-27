@@ -99,6 +99,34 @@ layout: default
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
   </div>
+  {% if page.categories.size > 0 %}
+  <div class="related-posts">
+    <div class="related-posts-title">Related Posts</div>
+    <ul class="related-posts-list">
+      {% assign related_count = 0 %}
+      {% for post in site.posts %}
+        {% if post.url != page.url %}
+          {% assign shared = 0 %}
+          {% for cat in page.categories %}
+            {% if post.categories contains cat %}
+              {% assign shared = shared | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if shared > 0 %}
+            <li>
+              <a class="related-post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <div class="related-post-meta">{{ post.date | date: "%b %-d, %Y" }} &middot; {{ post.categories | join: ", " }}</div>
+            </li>
+            {% assign related_count = related_count | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if related_count == 0 %}
+        <li style="color: var(--color-text-light); font-family: var(--font-heading); font-size: 0.9rem;">No related posts yet.</li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
   <footer class="post-footer">
     <hr>
     <p class="post-nav">
