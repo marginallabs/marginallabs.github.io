@@ -28,7 +28,7 @@
   --color-tag-bg: #2a3a20;
 }
 
-html { font-size: 17px; scroll-behavior: smooth; }
+html { font-size: 17px; scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   font-family: var(--font-body);
