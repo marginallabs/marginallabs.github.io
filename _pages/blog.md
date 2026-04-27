@@ -2,16 +2,12 @@
 layout: page
 title: Blog
 permalink: /blog/
+rss: true
 ---
 
 <div class="search-box">
   <input type="text" id="search-input" placeholder="Search posts..." autocomplete="off">
   <span class="search-clear" id="search-clear">&times;</span>
-</div>
-
-<div class="rss-subscribe">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-  <a href="{{ '/feed.xml' | relative_url }}" target="_blank">RSS Feed</a>
 </div>
 
 <div class="category-filters" id="category-filters">
