@@ -291,6 +291,11 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   gap: 0.4em;
   margin: 0.6em 0;
 }
+.rss-footnote {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 0.3em 0 0 0.2em;
+}
 .search-box {
   position: relative;
   margin-bottom: 1.5em;

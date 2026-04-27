@@ -20,8 +20,9 @@ permalink: /subscribe/
     <li>Install an RSS reader (see suggestions below)</li>
     <li>Click <strong>Subscribe</strong> or <strong>Add Feed</strong> in the app</li>
     <li>Paste the URL above and save</li>
-    <li>New posts will appear in your reader automatically!</li>
+    <li>New posts will appear in your reader automatically!<sup>*</sup></li>
   </ol>
+  <p class="rss-footnote"><sup>*</sup>Some readers do not support inline math (LaTeX) rendering. For browser-based readers like Feedly or Inoreader, install the <a href="https://chromewebstore.google.com/detail/tex-all-the-things/cbimabofgmfbkbfkecmncojngofdhdlo" target="_blank">TeX All the Things</a> extension (Chrome/Firefox) to display math correctly.</p>
 
   <h2>Popular RSS Readers</h2>
   <div class="rss-readers-table-wrap">
@@ -31,7 +32,6 @@ permalink: /subscribe/
           <th>Reader</th>
           <th>Free</th>
           <th>Account</th>
-          <th>Math</th>
           <th>Platform</th>
         </tr>
       </thead>
@@ -40,35 +40,30 @@ permalink: /subscribe/
           <td>Feedly</td>
           <td>Yes</td>
           <td>Yes</td>
-          <td>No</td>
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
           <td>Inoreader</td>
           <td>Yes</td>
           <td>Yes</td>
-          <td>No</td>
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
           <td>NetNewsWire</td>
           <td>Yes</td>
           <td>No</td>
-          <td>Yes</td>
           <td>macOS, iOS</td>
         </tr>
         <tr>
           <td>Reeder</td>
           <td>Yes</td>
           <td>No</td>
-          <td>Yes</td>
           <td>iOS, macOS</td>
         </tr>
         <tr>
           <td>Feeder</td>
           <td>Yes</td>
           <td>No</td>
-          <td>Yes</td>
           <td>Android</td>
         </tr>
       </tbody>
