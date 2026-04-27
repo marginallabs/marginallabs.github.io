@@ -296,6 +296,10 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   color: var(--color-text-light);
   margin: 0.3em 0 0 0.2em;
 }
+.rss-readers-table abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
 .search-box {
   position: relative;
   margin-bottom: 1.5em;

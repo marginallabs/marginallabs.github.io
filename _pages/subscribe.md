@@ -31,9 +31,9 @@ permalink: /subscribe/
         <tr>
           <th>Reader</th>
           <th>Free</th>
-          <th>Sign-up</th>
+          <th>No Sign-up</th>
           <th>Open Source</th>
-          <th>Offline</th>
+          <th><abbr title="Articles are saved locally so you can read without an internet connection">Offline</abbr></th>
           <th>Platform</th>
         </tr>
       </thead>
@@ -41,7 +41,7 @@ permalink: /subscribe/
         <tr>
           <td><a href="https://netnewswire.com" target="_blank">NetNewsWire</a></td>
           <td>&#10003;</td>
-          <td>&#10007;</td>
+          <td>&#10003;</td>
           <td>&#10003;</td>
           <td>&#10003;</td>
           <td>macOS, iOS</td>
@@ -49,7 +49,7 @@ permalink: /subscribe/
         <tr>
           <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
           <td>&#10003;</td>
-          <td>&#10007;</td>
+          <td>&#10003;</td>
           <td>&#10003;</td>
           <td>&#10003;</td>
           <td>Android</td>
@@ -57,7 +57,7 @@ permalink: /subscribe/
         <tr>
           <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
           <td>&#10003;</td>
-          <td>&#10007;</td>
+          <td>&#10003;</td>
           <td>&#10007;</td>
           <td>&#10003;</td>
           <td>macOS, iOS</td>
@@ -65,7 +65,7 @@ permalink: /subscribe/
         <tr>
           <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
           <td>&#10003;</td>
-          <td>&#10003;</td>
+          <td>&#10007;</td>
           <td>&#10007;</td>
           <td>&#10003;</td>
           <td>Web, iOS, Android</td>
