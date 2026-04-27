@@ -37,6 +37,8 @@
 </script>
 </head>
 <body>
+  <!-- Reading progress bar (posts only, shown via JS) -->
+  <div class="progress-bar" id="progress-bar"></div>
   <!-- Desktop header -->
   <header class="site-header" id="desktop-header">
     <div class="wrapper">
@@ -90,6 +92,19 @@
       <p class="footer-text">&copy; {{ 'now' | date: "%Y" }} Marginal Lab</p>
     </div>
   </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
   <script>
   (function() {
@@ -161,6 +176,75 @@
     } else {
       targets.forEach(function(el) { el.classList.add('visible'); });
     }
+  })();
+
+  // Reading progress bar (posts only)
+  (function() {
+    var bar = document.getElementById('progress-bar');
+    var post = document.querySelector('.post');
+    if (!bar || !post) return;
+    window.addEventListener('scroll', function() {
+      var rect = post.getBoundingClientRect();
+      var total = post.scrollHeight;
+      var scrolled = -rect.top + window.innerHeight * 0.3;
+      var pct = Math.min(Math.max(scrolled / total * 100, 0), 100);
+      bar.style.width = pct + '%';
+    }, { passive: true });
+  })();
+
+  // Back to top
+  (function() {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 600) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    }, { passive: true });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  // Image lightbox
+  (function() {
+    var overlay = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    var closeBtn = document.getElementById('lightbox-close');
+    if (!overlay) return;
+    document.querySelectorAll('.post-content img, .post-content .figure-img').forEach(function(el) {
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', function() {
+        img.src = el.src;
+        img.alt = el.alt || '';
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLightbox() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+
+  // Copy link button
+  (function() {
+    var copyBtns = document.querySelectorAll('.share-btn.copy-link');
+    copyBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          var tip = btn.querySelector('.copy-tooltip');
+          tip.classList.add('show');
+          setTimeout(function() { tip.classList.remove('show'); }, 1500);
+        });
+      });
+    });
   })();
   </script>
 </body>

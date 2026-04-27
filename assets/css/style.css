@@ -28,7 +28,7 @@
   --color-tag-bg: #2a3a20;
 }
 
-html { font-size: 17px; }
+html { font-size: 17px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -511,6 +511,189 @@ img.figure-img {
   z-index: 90;
 }
 .sidebar-overlay.active { display: block; }
+
+/* --- Reading Progress Bar --- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-accent);
+  z-index: 1000;
+  transition: width 0.1s linear;
+  width: 0%;
+}
+
+/* --- Back to Top --- */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 50;
+  border-bottom: none !important;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  opacity: 0.85;
+}
+.back-to-top svg { width: 20px; height: 20px; }
+
+/* --- Reading Time --- */
+.reading-time {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+/* --- Share Buttons --- */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 1.5em 0;
+  padding-top: 1em;
+  border-top: 1px solid var(--color-border);
+}
+.share-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-right: 0.3em;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all 0.15s;
+  border-bottom: none !important;
+}
+.share-btn:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+.share-btn svg { width: 16px; height: 16px; fill: currentColor; }
+.share-btn.copy-link { position: relative; }
+.share-btn .copy-tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.share-btn .copy-tooltip.show { opacity: 1; }
+
+/* --- Image Lightbox --- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: zoom-out;
+}
+.lightbox-overlay.open { opacity: 1; }
+.lightbox-overlay img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-close svg { width: 28px; height: 28px; }
+
+/* --- Post Series --- */
+.series-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 0.15em 0.6em;
+  color: var(--color-accent);
+  margin-right: 0.5em;
+}
+.series-nav {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  margin: 1.5em 0;
+}
+.series-nav-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4em;
+}
+.series-nav ol {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.series-nav li {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  margin: 0.2em 0;
+  color: var(--color-text-light);
+}
+.series-nav li a {
+  color: var(--color-link);
+}
+.series-nav li.current {
+  font-weight: 600;
+  color: var(--color-text);
+}
 
 /* --- Responsive --- */
 @media (max-width: 600px) {
