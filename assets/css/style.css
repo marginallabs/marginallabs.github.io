@@ -164,7 +164,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   border-bottom: none !important;
   transition: color 0.15s;
   padding: 0.7em 0;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
 }
 .sidebar-nav a:last-child {
   border-bottom: none;
