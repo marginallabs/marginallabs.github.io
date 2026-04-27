@@ -74,7 +74,45 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   padding: 0 1.5rem;
 }
 
-/* --- Sidebar --- */
+/* --- Desktop Header --- */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: none !important;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+.site-nav a {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  border-bottom: none !important;
+  transition: color 0.15s;
+}
+.site-nav a:hover { color: var(--color-accent); }
+
+/* --- Sidebar (mobile only) --- */
 .sidebar {
   position: fixed;
   top: 0;
@@ -136,56 +174,6 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .sidebar-contact:hover { color: #fff; }
 .sidebar-contact span { word-break: break-all; }
 
-/* --- Hamburger Toggle --- */
-.sidebar-toggle {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 200;
-  background: var(--color-accent);
-  border: none;
-  border-radius: 6px;
-  padding: 0.55rem 0.5rem;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 38px;
-  height: 38px;
-  -webkit-tap-highlight-color: transparent;
-  transition: left 0.25s ease;
-}
-.sidebar-toggle.open {
-  left: 212px;
-}
-.sidebar-toggle span {
-  display: block;
-  width: 20px;
-  height: 2.5px;
-  background: #fff;
-  border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-.sidebar-toggle.open span:nth-child(1) {
-  transform: translateY(7.5px) rotate(45deg);
-}
-.sidebar-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-.sidebar-toggle.open span:nth-child(3) {
-  transform: translateY(-7.5px) rotate(-45deg);
-}
-
-/* --- Main Content (shifts right when sidebar open) --- */
-.main-content {
-  transition: margin-left 0.25s ease;
-  min-height: 100vh;
-}
-.main-content.shifted {
-  margin-left: 200px;
-}
 
 /* --- Home Hero --- */
 .home-hero {
@@ -476,25 +464,89 @@ img.figure-img {
   margin-bottom: 2em;
 }
 
-/* --- Dark Mode Toggle (in sidebar) --- */
+/* --- Dark Mode Toggle --- */
 .theme-toggle {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.3em;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-light);
   border-bottom: none !important;
   line-height: 1;
   text-align: left;
 }
-.theme-toggle:hover { color: #fff; }
+.theme-toggle:hover { color: var(--color-accent); }
 .theme-toggle svg { width: 20px; height: 20px; }
 .theme-toggle .icon-sun { display: none; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
 
+/* --- Sidebar theme overrides (white icons) --- */
+.sidebar .theme-toggle {
+  color: rgba(255,255,255,0.6);
+}
+.sidebar .theme-toggle:hover { color: #fff; }
+
+/* --- Hamburger Toggle (mobile only) --- */
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 90;
+}
+.sidebar-overlay.active { display: block; }
+
 /* --- Responsive --- */
 @media (max-width: 600px) {
+  /* Hide desktop header on mobile */
+  .site-header { display: none; }
+  /* Show hamburger */
+  .sidebar-toggle {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 200;
+    background: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    padding: 0.55rem 0.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    -webkit-tap-highlight-color: transparent;
+    transition: left 0.25s ease;
+  }
+  .sidebar-toggle.open {
+    left: 212px;
+  }
+  .sidebar-toggle span {
+    display: block;
+    width: 20px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .sidebar-toggle.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  .sidebar-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .sidebar-toggle.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
   .home-hero { padding: 2.5rem 0 1.5rem; }
   .lab-title { font-size: 2.2rem; }
   html { font-size: 15px; }
