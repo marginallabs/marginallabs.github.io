@@ -1,4 +1,4 @@
 This is a Brave Creators publisher verification file.
 
 Domain: marginallabs.github.io
-Token: 43b3e14a2daee9e0c93507cd02cc1858f52423e8430a1d8443df5edf3eddf595
+Token: 611c95d875c4db7f6376995d565f0d1525db165c6920faeb3caad8c07563ed61
