@@ -526,7 +526,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 
 /* --- Post --- */
 .post { padding: 2rem 0 3rem; }
-mjx-container[display="true"] { max-width: 100%; overflow-x: auto; }
+mjx-container[display] { max-width: 100%; overflow-x: auto; }
 .post-header { margin-bottom: 1.5em; }
 .post-title {
   font-size: 2rem;
