@@ -26,22 +26,12 @@
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       tags: 'ams'
     },
-    svg: {
+    chtml: {
       linebreaks: { automatic: true }
-    },
-    startup: {
-      pageReady: function() {
-        return MathJax.startup.defaultPageReady().then(function() {
-          document.querySelectorAll('mjx-container[display]').forEach(function(c) {
-            c.style.maxWidth = '100%';
-            c.style.overflowX = 'auto';
-          });
-        });
-      }
     }
   };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
   (function() {
     var stored = localStorage.getItem('theme');
