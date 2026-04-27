@@ -296,19 +296,45 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   color: var(--color-text-light);
   margin: 0.3em 0 0 0.2em;
 }
-.rss-readers-table .info-icon {
+.rss-readers-table .info-trigger {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.1em;
-  height: 1.1em;
-  font-size: 0.75em;
-  border: 1.5px solid var(--color-text-light);
+  width: 1.2em;
+  height: 1.2em;
+  font-size: 0.7em;
+  border: 1.5px solid var(--color-accent);
   border-radius: 50%;
-  color: var(--color-text-light);
-  cursor: help;
+  color: var(--color-accent);
+  cursor: pointer;
   vertical-align: middle;
-  margin-left: 0.2em;
+  margin-left: 0.25em;
+  position: relative;
+}
+.rss-readers-table .info-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5em;
+  padding: 0.6em 0.9em;
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text);
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.rss-readers-table .info-trigger:hover + .info-box,
+.rss-readers-table .info-trigger:focus + .info-box {
+  display: block;
+}
+.rss-readers-table th {
+  position: relative;
 }
 .search-box {
   position: relative;
