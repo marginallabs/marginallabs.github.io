@@ -625,10 +625,11 @@ img.figure-img {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s;
   cursor: zoom-out;
 }
-.lightbox-overlay.open { opacity: 1; }
+.lightbox-overlay.open { opacity: 1; pointer-events: auto; }
 .lightbox-overlay img {
   max-width: 92vw;
   max-height: 92vh;
