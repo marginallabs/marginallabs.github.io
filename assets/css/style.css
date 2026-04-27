@@ -28,7 +28,7 @@
   --color-tag-bg: #2a3a20;
 }
 
-html { font-size: 17px; scroll-behavior: smooth; overflow-x: clip; }
+html { font-size: 17px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -36,7 +36,7 @@ body {
   background: var(--color-bg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 a {
@@ -466,7 +466,8 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 
 /* --- Post --- */
 .post { padding: 2rem 0 3rem; }
-.post-content { overflow-x: hidden; }
+.post-content { overflow-wrap: break-word; word-break: break-word; }
+.post-content mjx-container { display: inline-block !important; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
 .post-header { margin-bottom: 1.5em; }
 .post-title {
   font-size: 2rem;
