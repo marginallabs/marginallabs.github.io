@@ -32,7 +32,7 @@ other conditions? Does this strategy bring us closer to the favourable
 outcome?
 
 ![The second-best optimum may require violating the remaining conditions]({{ site.baseurl }}/assets/img/posts/2026-04-27/fig_conditions.png){:.figure-img}
-*The second-best optimum $$X^{\ast}$$ may require violating the remaining conditions.*
+*The second-best optimum $X^{\ast}$ may require violating the remaining conditions.*
 {: .figure-caption}
 
 The answer is **no**. The concept is simple: the optimal strategy
@@ -272,9 +272,11 @@ $$g_k(x_1, x_2, \ldots, x_n) = 0, \quad k = 1, 2, \ldots, n.$$
 The Lagrangian is
 
 $$\mathcal{L} = F(x_1, \ldots, x_n) + \sum_{k=1}^{n} \lambda_k \, g_k(x_1, \ldots, x_n),$$
+
 and the first-order conditions are
 
 $$\frac{\partial F}{\partial x_i} + \sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_i} = 0, \quad i = 1, 2, \ldots, n. \tag{1}$$
+
 This is a system of $n$ equations in $n$ unknowns $(x_1, \ldots, x_n)$
 with $n$ multipliers $(\lambda_1, \ldots, \lambda_n)$. Denote the
 first-best solution by $(\bar{x}_1, \ldots, \bar{x}_n)$ with multipliers
@@ -286,6 +288,7 @@ conditions $g_k = 0$ for $k \neq i$ are still available. The new
 Lagrangian is
 
 $$\mathcal{L}' = F(x_1, \ldots, x_n) + \mu_i\,(g_i - c) + \sum_{k \neq i} \mu_k \, g_k(x_1, \ldots, x_n),$$
+
 where the constraint $g_i = c$ is now explicit. The new first-order
 conditions are
 
@@ -295,6 +298,7 @@ $$\frac{\partial F}{\partial x_j} + \mu_i \frac{\partial g_i}{\partial x_j} + \s
 same left-hand side $\partial F / \partial x_j$, so
 
 $$\sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_j} = \mu_i \frac{\partial g_i}{\partial x_j} + \sum_{k \neq i} \mu_k \frac{\partial g_k}{\partial x_j}, \quad j = 1, \ldots, n.$$
+
 This is a system of $n$ linear equations in the multipliers. The
 first-best multipliers $(\bar{\lambda}_1, \ldots, \bar{\lambda}_n)$
 satisfy the version evaluated at $(\bar{x}_1, \ldots, \bar{x}_n)$. But
@@ -309,6 +313,7 @@ for the $\lambda_k$. Therefore $\mu_k \neq \bar{\lambda}_k$ in general.
 second-best condition (2) gives
 
 $$\frac{\partial F}{\partial x_j} = -\sum_{k=1}^{n} \mu_k \frac{\partial g_k}{\partial x_j},$$
+
 which depends on *every* $\mu_k$, including $\mu_i$. Since
 $\mu_i \neq \bar{\lambda}_i$, the right-hand side differs from the
 first-best condition for every $j$, not just $j = i$. Therefore every
