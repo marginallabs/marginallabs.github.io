@@ -191,6 +191,12 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   padding: 4rem 0 2rem;
   text-align: center;
 }
+.lab-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto 0.5em;
+}
 .lab-title {
   font-family: var(--font-heading);
   font-size: 3rem;
