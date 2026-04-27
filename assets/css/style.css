@@ -156,7 +156,6 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
 }
 .sidebar-nav a {
   font-family: var(--font-heading);
@@ -164,6 +163,11 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   color: rgba(255,255,255,0.75);
   border-bottom: none !important;
   transition: color 0.15s;
+  padding: 0.7em 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.sidebar-nav a:last-child {
+  border-bottom: none;
 }
 .sidebar-nav a:hover { color: #fff; }
 .sidebar-bottom {
@@ -519,6 +523,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 
 /* --- Post --- */
 .post { padding: 2rem 0 3rem; }
+mjx-container[display="true"] { max-width: 100%; overflow-x: auto; }
 .post-header { margin-bottom: 1.5em; }
 .post-title {
   font-size: 2rem;
