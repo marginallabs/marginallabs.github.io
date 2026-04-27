@@ -37,31 +37,31 @@ permalink: /subscribe/
       </thead>
       <tbody>
         <tr>
-          <td>Feedly</td>
+          <td><a href="https://feedly.com" target="_blank">Feedly</a></td>
           <td>Yes</td>
           <td>Yes</td>
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
-          <td>Inoreader</td>
+          <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
           <td>Yes</td>
           <td>Yes</td>
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
-          <td>NetNewsWire</td>
+          <td><a href="https://netnewswire.com" target="_blank">NetNewsWire</a></td>
           <td>Yes</td>
           <td>No</td>
           <td>macOS, iOS</td>
         </tr>
         <tr>
-          <td>Reeder</td>
+          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
           <td>Yes</td>
           <td>No</td>
           <td>iOS, macOS</td>
         </tr>
         <tr>
-          <td>Feeder</td>
+          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
           <td>Yes</td>
           <td>No</td>
           <td>Android</td>
