@@ -98,6 +98,14 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   text-transform: uppercase;
   letter-spacing: 0.03em;
   border-bottom: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.site-logo {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 3px;
 }
 .site-nav {
   display: flex;
@@ -140,6 +148,9 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   letter-spacing: 0.03em;
   text-transform: uppercase;
   border-bottom: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   margin-bottom: 2rem;
 }
 .sidebar-nav {
