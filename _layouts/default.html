@@ -28,6 +28,16 @@
     },
     svg: {
       linebreaks: { automatic: true }
+    },
+    startup: {
+      pageReady: function() {
+        return MathJax.startup.defaultPageReady().then(function() {
+          document.querySelectorAll('mjx-container[display]').forEach(function(c) {
+            c.style.maxWidth = '100%';
+            c.style.overflowX = 'auto';
+          });
+        });
+      }
     }
   };
   </script>
