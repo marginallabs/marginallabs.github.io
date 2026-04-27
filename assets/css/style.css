@@ -242,6 +242,9 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 }
 .rss-subscribe svg { flex-shrink: 0; }
 .rss-subscribe a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   color: var(--color-text-light);
   border-bottom: none !important;
   transition: color 0.15s;
