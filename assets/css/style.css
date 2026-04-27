@@ -547,8 +547,8 @@ img.figure-img {
     transform: translateY(-7.5px) rotate(-45deg);
   }
 
-  .page-content { padding-top: 3.5rem; }
-  .home-hero { padding: 3.5rem 0 1.5rem; }
+  .page-content { padding-top: 3rem; }
+  .home-hero { padding: 3rem 0 1.5rem; }
   .lab-title { font-size: 2.2rem; }
   html { font-size: 15px; }
 }
