@@ -38,11 +38,7 @@
   .post-meta { font-size: 10pt; color: #444 !important; border-bottom: 0.5pt solid #999; padding-bottom: 6pt; margin-bottom: 12pt; }
   .post-abstract { font-size: 10pt; border-left: 2pt solid #000; background: none !important; color: #333 !important; padding: 6pt 10pt; }
 
-  /* Links: show URL for external links */
   a { color: #000 !important; text-decoration: underline; border-bottom: none !important; }
-  .post-content a[href]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
-  .post-content a[href^="#"]:after,
-  .post-content a[href^="javascript:"]:after { content: ""; }
   .category-tag { border: 0.5pt solid #000; background: none !important; color: #000 !important; }
 
   /* Figures */
