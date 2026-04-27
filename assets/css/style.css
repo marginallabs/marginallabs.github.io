@@ -136,6 +136,8 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   display: flex;
   flex-direction: column;
   padding: 2rem 1.2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 .sidebar.open {
   transform: translateX(0);
@@ -176,6 +178,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   display: flex;
   flex-direction: column;
   gap: 0.8em;
+  flex-shrink: 0;
 }
 .sidebar-contact {
   display: flex;
