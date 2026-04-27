@@ -24,12 +24,55 @@ permalink: /subscribe/
   </ol>
 
   <h2>Popular RSS Readers</h2>
-  <div class="rss-apps">
-    <span class="app-tag">Feedly</span>
-    <span class="app-tag">Inoreader</span>
-    <span class="app-tag">NetNewsWire</span>
-    <span class="app-tag">Reeder</span>
-    <span class="app-tag">Feeder</span>
+  <div class="rss-readers-table-wrap">
+    <table class="rss-readers-table">
+      <thead>
+        <tr>
+          <th>Reader</th>
+          <th>Free</th>
+          <th>Account</th>
+          <th>Math</th>
+          <th>Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Feedly</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Web, iOS, Android</td>
+        </tr>
+        <tr>
+          <td>Inoreader</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Web, iOS, Android</td>
+        </tr>
+        <tr>
+          <td>NetNewsWire</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>macOS, iOS</td>
+        </tr>
+        <tr>
+          <td>Reeder</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>iOS, macOS</td>
+        </tr>
+        <tr>
+          <td>Feeder</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Android</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
