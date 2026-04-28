@@ -55,7 +55,7 @@ permalink: /subscribe/
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
-          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
+          <td><a href="https://news.nononsenseapps.com/about/" target="_blank">Feeder</a></td>
           <td>&#10003;</td>
           <td>&#10003;</td>
           <td>&#10003;</td>
