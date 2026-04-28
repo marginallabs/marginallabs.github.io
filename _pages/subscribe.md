@@ -55,12 +55,12 @@ permalink: /subscribe/
           <td>Web, iOS, Android</td>
         </tr>
         <tr>
-          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
-          <td>&#10003;<sup>&Dagger;</sup></td>
+          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
           <td>&#10003;</td>
-          <td>&#10007;</td>
           <td>&#10003;</td>
-          <td>macOS, iOS</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>Android</td>
         </tr>
         <tr>
           <td><a href="https://netnewswire.com" target="_blank">NetNewsWire</a></td>
@@ -71,17 +71,18 @@ permalink: /subscribe/
           <td>macOS, iOS</td>
         </tr>
         <tr>
-          <td><a href="https://news.nononsenseapps.com" target="_blank">Feeder</a></td>
+          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
+          <td>&#10003;<sup>&Dagger;</sup></td>
           <td>&#10003;</td>
+          <td>&#10007;</td>
           <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>Android</td>
+          <td>macOS, iOS</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription. <sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
+  <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription.</p>
+  <p class="rss-footnote"><sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
 </div>
 
 <script>
