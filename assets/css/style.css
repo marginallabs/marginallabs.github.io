@@ -531,10 +531,6 @@ details[open] > .section-toggle .toggle-chevron {
   margin-top: 2em;
 }
 
-.post-content strong {
-  color: var(--color-accent);
-}
-
 /* --- Blog List --- */
 .blog-list-item {
   font-family: var(--font-heading);
@@ -913,6 +909,8 @@ img.figure-img {
 .not-found-home:hover { opacity: 0.85; }
 
 /* --- Related Posts --- */
+
+.page-content strong { color: var(--color-accent); }
 .related-posts {
   margin: 2em 0 0;
   padding-top: 1.5em;
