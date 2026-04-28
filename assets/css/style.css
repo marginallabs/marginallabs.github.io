@@ -135,7 +135,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   transition: transform 0.25s ease;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1.2rem;
+  padding: 1.2rem 1.2rem;
   overflow-y: auto;
   box-sizing: border-box;
 }
@@ -153,7 +153,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 .sidebar-nav {
   display: flex;
