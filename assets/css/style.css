@@ -281,6 +281,31 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .rss-guide h2 { font-size: 1.1rem; margin-top: 1.8em; border-bottom: none; padding-bottom: 0; }
 .section-title-row { display: flex; align-items: center; gap: 0.4em; }
 .section-title-row svg { color: var(--color-text-light); flex-shrink: 0; }
+.section-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.section-toggle::-webkit-details-marker { display: none; }
+.section-toggle::marker { display: none; content: ""; }
+.section-toggle h2 { margin: 0; }
+.toggle-chevron {
+  color: var(--color-text-light);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+details[open] > .section-toggle .toggle-chevron {
+  transform: rotate(180deg);
+}
+.section-content {
+  padding-top: 0.8em;
+}
+.rss-guide details { margin-bottom: 0; }
+.rss-guide details + details { margin-top: 0; }
 .rss-url-box {
   display: flex;
   align-items: center;
