@@ -23,6 +23,7 @@ permalink: /subscribe/
     <li>New posts will appear in your reader automatically!<sup>*</sup></li>
   </ol>
   <p class="rss-footnote"><sup>*</sup>Some readers do not support inline math (LaTeX) rendering. For browser-based readers like Feedly or Inoreader, install the <a href="https://chromewebstore.google.com/detail/webtex-%E2%80%93-render-latex-any/cbcpbegaepelbhjfkikhbhhoemegdbim" target="_blank">WebTeX</a> extension (Chrome) to display math correctly.</p>
+  <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription. <sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
 
   <h2>Popular RSS Readers</h2>
   <div class="rss-readers-table-wrap">
@@ -39,6 +40,30 @@ permalink: /subscribe/
       </thead>
       <tbody>
         <tr>
+          <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10007;<sup>&dagger;</sup></td>
+          <td>Web, iOS, Android</td>
+        </tr>
+        <tr>
+          <td><a href="https://feedly.com" target="_blank">Feedly</a></td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>Web, iOS, Android</td>
+        </tr>
+        <tr>
+          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
+          <td>&#10003;<sup>&Dagger;</sup></td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>macOS, iOS</td>
+        </tr>
+        <tr>
           <td><a href="https://netnewswire.com" target="_blank">NetNewsWire</a></td>
           <td>&#10003;</td>
           <td>&#10003;</td>
@@ -53,30 +78,6 @@ permalink: /subscribe/
           <td>&#10003;</td>
           <td>&#10003;</td>
           <td>Android</td>
-        </tr>
-        <tr>
-          <td><a href="https://reederapp.com" target="_blank">Reeder</a></td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>&#10007;</td>
-          <td>&#10003;</td>
-          <td>macOS, iOS</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.inoreader.com" target="_blank">Inoreader</a></td>
-          <td>&#10003;</td>
-          <td>&#10007;</td>
-          <td>&#10007;</td>
-          <td>&#10003;</td>
-          <td>Web, iOS, Android</td>
-        </tr>
-        <tr>
-          <td><a href="https://feedly.com" target="_blank">Feedly</a></td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>&#10007;</td>
-          <td>&#10007;</td>
-          <td>Web, iOS, Android</td>
         </tr>
       </tbody>
     </table>
