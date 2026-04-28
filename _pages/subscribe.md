@@ -118,35 +118,48 @@ permalink: /subscribe/
     var content = detail.querySelector('.section-content');
     if (!content) return;
 
-    content.style.overflow = 'hidden';
-
     summary.addEventListener('click', function(e) {
       e.preventDefault();
       if (detail.open) {
-        // Closing: animate height to 0, then close
-        content.style.height = content.scrollHeight + 'px';
-        content.offsetHeight; // force reflow
-        content.style.height = '0px';
-        content.style.opacity = '0';
-        content.addEventListener('transitionend', function handler() {
-          content.removeEventListener('transitionend', handler);
+        var h = content.scrollHeight;
+        content.style.height = h + 'px';
+        content.style.willChange = 'height, opacity';
+        requestAnimationFrame(function() {
+          content.style.height = '0px';
+          content.style.opacity = '0';
+        });
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          content.removeEventListener('transitionend', finish);
           detail.open = false;
           content.style.height = '';
           content.style.opacity = '';
-        });
+          content.style.willChange = '';
+        }
+        content.addEventListener('transitionend', finish);
+        setTimeout(finish, 350);
       } else {
-        // Opening: set open, then animate height from 0
         detail.open = true;
         content.style.height = '0px';
         content.style.opacity = '0';
-        content.offsetHeight; // force reflow
-        content.style.height = content.scrollHeight + 'px';
-        content.style.opacity = '1';
-        content.addEventListener('transitionend', function handler() {
-          content.removeEventListener('transitionend', handler);
+        content.style.willChange = 'height, opacity';
+        requestAnimationFrame(function() {
+          content.style.height = content.scrollHeight + 'px';
+          content.style.opacity = '1';
+        });
+        var done2 = false;
+        function finish2() {
+          if (done2) return;
+          done2 = true;
+          content.removeEventListener('transitionend', finish2);
           content.style.height = '';
           content.style.opacity = '';
-        });
+          content.style.willChange = '';
+        }
+        content.addEventListener('transitionend', finish2);
+        setTimeout(finish2, 350);
       }
     });
   });
