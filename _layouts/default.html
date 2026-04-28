@@ -98,6 +98,7 @@
 
   <main class="page-content">
     <div class="wrapper">
+      {% unless page.url == '/' %}<h2 class="mobile-page-title">Marginal Lab</h2>{% endunless %}
       {{ content }}
     </div>
   </main>
