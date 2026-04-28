@@ -5,6 +5,7 @@ permalink: /subscribe/
 ---
 
 <div class="rss-guide">
+  <h2>RSS Feed</h2>
   <p>Subscribe to new posts from Marginal Lab via <a href="{{ '/feed.xml' | relative_url }}" target="_blank">RSS Feed</a> — delivered automatically to your reader!</p>
 
   <div class="rss-url-box">
@@ -12,10 +13,10 @@ permalink: /subscribe/
     <button class="rss-copy-btn" id="rss-copy-btn" aria-label="Copy feed URL">Copy</button>
   </div>
 
-  <h2>What is an RSS Feed?</h2>
+  <h3>What is an RSS Feed?</h3>
   <p>RSS (Really Simple Syndication) is a standard format for publishing updates from a website. Instead of checking back for new content, your RSS reader fetches it for you — like a subscription to a newspaper, but free and private.</p>
 
-  <h2>How to Subscribe</h2>
+  <h3>How to Subscribe</h3>
   <ol>
     <li>Install an RSS reader (see suggestions below)</li>
     <li>Click <strong>Subscribe</strong> or <strong>Add Feed</strong> in the app</li>
@@ -24,7 +25,7 @@ permalink: /subscribe/
   </ol>
   <p class="rss-footnote"><sup>*</sup>Some readers do not support inline math (LaTeX) rendering. For browser-based readers like Inoreader or Feedly, install the <a href="https://chromewebstore.google.com/detail/webtex-%E2%80%93-render-latex-any/cbcpbegaepelbhjfkikhbhhoemegdbim" target="_blank">WebTeX</a> extension (Chrome) to display math correctly.</p>
 
-  <h2>Popular RSS Readers</h2>
+  <h3>Popular RSS Readers</h3>
   <div class="rss-readers-table-wrap">
     <table class="rss-readers-table">
       <thead>
@@ -83,6 +84,9 @@ permalink: /subscribe/
   </div>
   <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription.</p>
   <p class="rss-footnote"><sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
+
+  <h2>Other Subscribing Methods</h2>
+  <p>Coming soon.</p>
 </div>
 
 <script>
