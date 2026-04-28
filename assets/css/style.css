@@ -808,7 +808,7 @@ img.figure-img {
 }
 .lightbox-close {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   background: none;
   border: none;
@@ -975,7 +975,7 @@ pre code { background: none; padding: 0; font-size: 0.9rem; border-radius: 0; }
   .sidebar-toggle {
     display: flex;
     position: fixed;
-    top: 0.5rem;
+    top: 1rem;
     left: 1rem;
     z-index: 200;
     background: var(--color-accent);
