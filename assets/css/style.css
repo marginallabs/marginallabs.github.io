@@ -303,9 +303,25 @@ details[open] > .section-toggle .toggle-chevron {
 }
 .section-content {
   padding-top: 0.8em;
+  overflow: hidden;
 }
-.rss-guide details { margin-bottom: 0; }
-.rss-guide details + details { margin-top: 0; }
+.rss-guide details {
+  margin-bottom: 0;
+}
+.rss-guide details + details {
+  margin-top: 0;
+}
+.rss-guide details .section-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.rss-guide details[open] .section-content {
+  grid-template-rows: 1fr;
+}
+.rss-guide details .section-content > * {
+  overflow: hidden;
+}
 .rss-url-box {
   display: flex;
   align-items: center;
