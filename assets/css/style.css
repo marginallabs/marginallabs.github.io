@@ -303,20 +303,13 @@ details[open] > .section-toggle .toggle-chevron {
 }
 .section-content {
   padding-top: 0.8em;
-  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
 }
 .rss-guide details {
   margin-bottom: 0;
 }
 .rss-guide details + details {
   margin-top: 0;
-}
-.section-content {
-  transition: height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-.rss-guide details:not([open]) .section-content {
-  opacity: 0;
 }
 .rss-url-box {
   display: flex;

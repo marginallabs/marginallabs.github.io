@@ -118,36 +118,35 @@ permalink: /subscribe/
     var content = detail.querySelector('.section-content');
     if (!content) return;
 
-    content.style.height = '0px';
-    content.style.opacity = '0';
     content.style.overflow = 'hidden';
 
     summary.addEventListener('click', function(e) {
       e.preventDefault();
       if (detail.open) {
-        var h = content.scrollHeight;
-        content.style.height = h + 'px';
-        requestAnimationFrame(function() {
-          content.style.height = '0px';
-          content.style.opacity = '0';
+        // Closing: animate height to 0, then close
+        content.style.height = content.scrollHeight + 'px';
+        content.offsetHeight; // force reflow
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        content.addEventListener('transitionend', function handler() {
+          content.removeEventListener('transitionend', handler);
+          detail.open = false;
+          content.style.height = '';
+          content.style.opacity = '';
         });
-        detail.open = false;
       } else {
+        // Opening: set open, then animate height from 0
         detail.open = true;
         content.style.height = '0px';
         content.style.opacity = '0';
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            content.style.height = content.scrollHeight + 'px';
-            content.style.opacity = '1';
-          });
+        content.offsetHeight; // force reflow
+        content.style.height = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        content.addEventListener('transitionend', function handler() {
+          content.removeEventListener('transitionend', handler);
+          content.style.height = '';
+          content.style.opacity = '';
         });
-      }
-    });
-
-    content.addEventListener('transitionend', function() {
-      if (detail.open) {
-        content.style.height = 'auto';
       }
     });
   });
