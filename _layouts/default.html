@@ -28,6 +28,18 @@
     },
     chtml: {
       linebreaks: { automatic: true }
+    },
+    startup: {
+      pageReady: function() {
+        return MathJax.startup.defaultPageReady().then(function() {
+          document.querySelectorAll('mjx-container[display]').forEach(function(c) {
+            var wrap = document.createElement('div');
+            wrap.className = 'math-scroll';
+            c.parentNode.insertBefore(wrap, c);
+            wrap.appendChild(c);
+          });
+        });
+      }
     }
   };
   </script>
