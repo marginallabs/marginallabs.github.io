@@ -11,7 +11,7 @@ permalink: /subscribe/
       <svg class="toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
     <div class="section-content">
-      <p>Subscribe to new posts from Marginal Lab via <a href="{{ '/feed.xml' | relative_url }}" target="_blank">RSS Feed</a> — delivered automatically to your reader!</p>
+      <p>Subscribe to new posts from Marginal Lab via RSS Feed — delivered automatically to your reader!</p>
 
       <div class="rss-url-box">
         <code>https://marginallabs.github.io/feed.xml</code>
