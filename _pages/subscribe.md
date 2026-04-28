@@ -22,7 +22,7 @@ permalink: /subscribe/
     <li>Paste the URL above and save</li>
     <li>New posts will appear in your reader automatically!<sup>*</sup></li>
   </ol>
-  <p class="rss-footnote"><sup>*</sup>Some readers do not support inline math (LaTeX) rendering. For browser-based readers like Feedly or Inoreader, install the <a href="https://chromewebstore.google.com/detail/webtex-%E2%80%93-render-latex-any/cbcpbegaepelbhjfkikhbhhoemegdbim" target="_blank">WebTeX</a> extension (Chrome) to display math correctly.</p>
+  <p class="rss-footnote"><sup>*</sup>Some readers do not support inline math (LaTeX) rendering. For browser-based readers like Inoreader or Feedly, install the <a href="https://chromewebstore.google.com/detail/webtex-%E2%80%93-render-latex-any/cbcpbegaepelbhjfkikhbhhoemegdbim" target="_blank">WebTeX</a> extension (Chrome) to display math correctly.</p>
 
   <h2>Popular RSS Readers</h2>
   <div class="rss-readers-table-wrap">
