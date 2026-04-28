@@ -112,5 +112,36 @@ permalink: /subscribe/
       setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
     });
   });
+
+  document.querySelectorAll('.rss-guide details').forEach(function(detail) {
+    var summary = detail.querySelector('.section-toggle');
+    var content = detail.querySelector('.section-content');
+    if (!content) return;
+
+    summary.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (detail.open) {
+        var h = content.scrollHeight;
+        content.style.height = h + 'px';
+        content.offsetHeight;
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        detail.open = false;
+      } else {
+        detail.open = true;
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        content.offsetHeight;
+        content.style.height = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+      }
+    });
+
+    content.addEventListener('transitionend', function() {
+      if (detail.open) {
+        content.style.height = 'auto';
+      }
+    });
+  });
 })();
 </script>

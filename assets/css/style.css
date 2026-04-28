@@ -311,16 +311,12 @@ details[open] > .section-toggle .toggle-chevron {
 .rss-guide details + details {
   margin-top: 0;
 }
-.rss-guide details .section-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
-}
-.rss-guide details[open] .section-content {
-  grid-template-rows: 1fr;
-}
-.rss-guide details .section-content > * {
+.section-content {
+  transition: height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
+}
+.rss-guide details:not([open]) .section-content {
+  opacity: 0;
 }
 .rss-url-box {
   display: flex;
