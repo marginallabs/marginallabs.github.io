@@ -627,6 +627,10 @@ details[open] > .section-toggle .toggle-chevron {
 }
 
 /* --- Figures --- */
+
+.page-content a[href^="mailto:"] {
+  color: var(--color-accent);
+}
 figure, .figure-caption {
   text-align: center;
   margin: 2em auto;
