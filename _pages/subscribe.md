@@ -118,22 +118,30 @@ permalink: /subscribe/
     var content = detail.querySelector('.section-content');
     if (!content) return;
 
+    content.style.height = '0px';
+    content.style.opacity = '0';
+    content.style.overflow = 'hidden';
+
     summary.addEventListener('click', function(e) {
       e.preventDefault();
       if (detail.open) {
         var h = content.scrollHeight;
         content.style.height = h + 'px';
-        content.offsetHeight;
-        content.style.height = '0px';
-        content.style.opacity = '0';
+        requestAnimationFrame(function() {
+          content.style.height = '0px';
+          content.style.opacity = '0';
+        });
         detail.open = false;
       } else {
         detail.open = true;
         content.style.height = '0px';
         content.style.opacity = '0';
-        content.offsetHeight;
-        content.style.height = content.scrollHeight + 'px';
-        content.style.opacity = '1';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            content.style.height = content.scrollHeight + 'px';
+            content.style.opacity = '1';
+          });
+        });
       }
     });
 
