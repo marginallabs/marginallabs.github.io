@@ -6,8 +6,6 @@ permalink: /about/
 
 **Marginal Lab** is a blog about economic thinking — not just what economists study, but how they reason.
 
-### Our Logo
-
 The logo features the partial derivative symbol (∂), representing the concept of marginal analysis — the idea of looking at infinitesimal changes. It embodies the “partial” in “partial mean”, highlighting how small adjustments can have significant effects.
 
 The name comes from the concept of *thinking at the margin*: the idea that decisions are shaped by the next unit. Should you study one more hour? Should the government fund one more program? The answer always depends on what that *marginal* unit costs and what it delivers.
