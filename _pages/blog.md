@@ -2,7 +2,7 @@
 layout: page
 title: Blog
 permalink: /blog/
-rss: true
+subscribe: true
 ---
 
 <div class="search-box">
