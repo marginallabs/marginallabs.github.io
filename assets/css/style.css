@@ -935,6 +935,7 @@ img.figure-img {
 /* --- Related Posts --- */
 
 .page-content strong { color: var(--color-accent); }
+.page-content strong.no-accent { color: inherit; }
 .related-posts {
   margin: 2em 0 0;
   padding-top: 1.5em;

@@ -24,7 +24,7 @@ permalink: /subscribe/
       <h3>How to Subscribe</h3>
       <ol>
         <li>Install an RSS reader (see suggestions below)</li>
-        <li>Click <strong>Subscribe</strong> or <strong>Add Feed</strong> in the app</li>
+        <li>Click <strong class="no-accent">Subscribe</strong> or <strong class="no-accent">Add Feed</strong> in the app</li>
         <li>Paste the URL above and save</li>
         <li>New posts will appear in your reader automatically!<sup>*</sup></li>
       </ol>
