@@ -430,6 +430,22 @@ details[open] > .section-toggle .toggle-chevron {
   line-height: 1;
 }
 .search-clear:hover { color: var(--color-text); }
+.search-result-count {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-top: -0.8em;
+  margin-bottom: 0.5em;
+}
+mark.search-highlight {
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
 .no-results {
   font-family: var(--font-heading);
   color: var(--color-text-light);
