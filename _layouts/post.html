@@ -8,15 +8,15 @@ layout: default
         <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-meta">
       <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
-      {% if page.categories %}
-        <span class="post-categories">
-          {% for cat in page.categories %}
-            <span class="category-tag">{{ cat }}</span>
-          {% endfor %}
-        </span>
-      {% endif %}
       <span class="reading-time">{{ reading_time }} min read</span>
     </div>
+    {% if page.categories %}
+    <div class="post-tags">
+      {% for cat in page.categories %}
+        <span class="category-tag">{{ cat }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if page.series %}
     <div>
       {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}

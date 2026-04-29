@@ -590,6 +590,12 @@ details[open] > .section-toggle .toggle-chevron {
   align-items: center;
   gap: 0.8em;
 }
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.3em;
+}
 .category-tag {
   display: inline-block;
   background: var(--color-tag-bg);
