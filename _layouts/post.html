@@ -141,10 +141,14 @@ layout: default
     <hr>
     <p class="post-nav">
       {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+        <a class="post-nav-prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+      {% else %}
+        <span class="post-nav-prev"></span>
       {% endif %}
       {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+        <a class="post-nav-next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+      {% else %}
+        <span class="post-nav-next"></span>
       {% endif %}
     </p>
   </footer>

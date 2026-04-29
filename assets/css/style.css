@@ -633,7 +633,16 @@ details[open] > .section-toggle .toggle-chevron {
   justify-content: space-between;
   font-family: var(--font-heading);
   font-size: 0.9rem;
+  gap: 1em;
 }
+.post-nav-prev, .post-nav-next {
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post-nav-prev { text-align: left; }
+.post-nav-next { text-align: right; margin-left: auto; }
 
 /* --- Pages --- */
 .page { padding: 2rem 0 3rem; }
