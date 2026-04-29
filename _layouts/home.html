@@ -23,7 +23,7 @@ layout: default
         {% if post.categories %}
           <span class="post-category-badges">
             {% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}
-            {% if post.categories.size > 4 %}<span class="category-tag category-more">...</span>{% endif %}
+            {% if post.categories.size > 4 %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}
           </span>
         {% endif %}
         {% if post.abstract %}

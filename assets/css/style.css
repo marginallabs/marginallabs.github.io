@@ -441,6 +441,18 @@ details[open] > .section-toggle .toggle-chevron {
 .post-category-badges .category-tag {
   font-size: 0.7rem;
 }
+.post-category-badges .hidden-tag {
+  display: none;
+}
+.category-more-toggle {
+  cursor: pointer;
+  background: var(--color-tag-bg);
+  color: var(--color-accent);
+  font-style: italic;
+}
+.category-more-toggle:hover {
+  opacity: 0.8;
+}
 
 /* --- Category Filters --- */
 .category-filters {
