@@ -467,6 +467,29 @@ mark.search-highlight {
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+  margin: 2em 0;
+  font-family: var(--font-heading);
+}
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  padding: 0.3em 0.6em;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border) !important;
+  transition: all 0.15s;
+}
+.page-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.page-btn.active { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
 .no-results {
   font-family: var(--font-heading);
   color: var(--color-text-light);
