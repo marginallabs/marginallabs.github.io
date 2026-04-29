@@ -11,6 +11,7 @@ markdown: kramdown
 kramdown:
   math_engine: null
 theme: null
+future: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
