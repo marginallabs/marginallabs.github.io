@@ -1,9 +1,9 @@
 /* --- Reset & Base --- */
 
 /* Post thumbnail */
-.post-thumbnail { max-width: 120px; height: auto; margin-right: 1rem; float: left; }
+.post-thumbnail { max-width: 120px; height: auto; flex-shrink: 0; object-fit: cover; border-radius: 4px; }
 /* Ensure thumbnails inside post content fill width without cropping and retain lightbox */
-.post-content img.post-thumbnail { max-width: 100%; height: auto; float: none; margin: 0 auto 1rem; display: block; }
+.post-content img.post-thumbnail { max-width: 100%; height: auto; margin: 0 auto 1rem; display: block; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -544,6 +544,14 @@ details[open] > .section-toggle .toggle-chevron {
   font-family: var(--font-heading);
   padding: 0.6em 0;
   border-bottom: 1px solid var(--color-bg-alt);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.post-list-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 .post-date {
   color: var(--color-text-light);
