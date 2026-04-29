@@ -649,6 +649,9 @@ mark.search-highlight {
 .post-series-info strong {
   color: var(--color-text);
 }
+.series-label {
+  color: var(--color-text-light);
+}
 .post-tags {
   display: flex;
   flex-wrap: wrap;
