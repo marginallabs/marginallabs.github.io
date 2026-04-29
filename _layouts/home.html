@@ -18,8 +18,8 @@ layout: default
         <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
         {% if post.image %}<img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" />{% endif %}
 <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% if post.excerpt %}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% if post.abstract %}
+          <p class="post-excerpt">{{ post.abstract }}</p>
         {% endif %}
       </article>
     {% endfor %}
