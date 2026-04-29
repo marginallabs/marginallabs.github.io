@@ -2,6 +2,8 @@
 
 /* Post thumbnail */
 .post-thumbnail { max-width: 120px; height: auto; margin-right: 1rem; float: left; }
+/* Ensure thumbnails inside post content fill width without cropping and retain lightbox */
+.post-content img.post-thumbnail { max-width: 100%; height: auto; float: none; margin: 0 auto 1rem; display: block; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
