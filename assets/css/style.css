@@ -544,14 +544,12 @@ details[open] > .section-toggle .toggle-chevron {
   font-family: var(--font-heading);
   padding: 0.6em 0;
   border-bottom: 1px solid var(--color-bg-alt);
+}
+.post-title-row {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-}
-.post-list-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+  margin: 0.2em 0;
 }
 .post-date {
   color: var(--color-text-light);

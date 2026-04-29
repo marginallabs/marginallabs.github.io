@@ -15,14 +15,14 @@ layout: default
     <h2>Recent Posts</h2>
     {% for post in site.posts limit:5 %}
       <article class="blog-list-item">
-        {% if post.image %}<img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" />{% endif %}
-        <div class="post-list-body">
-          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
+        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
+        <div class="post-title-row">
+          {% if post.image %}<img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" />{% endif %}
           <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% if post.abstract %}
-            <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
-          {% endif %}
         </div>
+        {% if post.abstract %}
+          <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
+        {% endif %}
       </article>
     {% endfor %}
     {% if site.posts.size == 0 %}
