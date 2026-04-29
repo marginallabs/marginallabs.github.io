@@ -12,6 +12,7 @@ kramdown:
   math_engine: null
 theme: null
 future: true
+permalink: /blog/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
