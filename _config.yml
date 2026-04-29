@@ -26,7 +26,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      image: /assets/img/default-og.png
   - scope:
       path: "_pages"
       type: "pages"
