@@ -232,7 +232,7 @@
     var img = document.getElementById('lightbox-img');
     var closeBtn = document.getElementById('lightbox-close');
     if (!overlay) return;
-    document.querySelectorAll('.post-content img, .post-content .figure-img').forEach(function(el) {
+    document.querySelectorAll('.post-content img, .post-content .figure-img, .post-header img, .post-header .figure-img').forEach(function(el) {
       el.style.cursor = 'zoom-in';
       el.addEventListener('click', function() {
         img.src = el.src;

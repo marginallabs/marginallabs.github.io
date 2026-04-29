@@ -5,7 +5,7 @@ layout: default
 {% assign reading_time = words | divided_by: 200 | at_least: 1 %}
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-meta">
       <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
       {% if page.categories %}
@@ -27,6 +27,9 @@ layout: default
       {% endfor %}
       <span class="series-badge">{{ page.series }}</span>
     </div>
+    {% endif %}
+    {% if page.image %}
+      <p class="post-figure"><img src="{{ page.image | relative_url }}" alt="Thumbnail for {{ page.title }}" class="figure-img" style="max-width:100%; height:auto;" /></p>
     {% endif %}
     {% if page.abstract %}
       <p class="post-abstract">{{ page.abstract }}</p>
