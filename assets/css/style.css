@@ -904,6 +904,7 @@ img.figure-img {
   color: var(--color-accent);
   margin-bottom: 0.2em;
   line-height: 1;
+  word-break: break-all;
 }
 .not-found-message {
   font-size: 1.15rem;
