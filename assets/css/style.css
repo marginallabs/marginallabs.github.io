@@ -627,6 +627,8 @@ details[open] > .section-toggle .toggle-chevron {
 }
 
 /* --- Footer --- */
+/* Override max-height for post content thumbnails */
+.post-content img.post-thumbnail { max-height: none; }
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--color-border);
