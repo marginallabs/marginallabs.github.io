@@ -31,6 +31,9 @@
 html { font-size: 17px; scroll-behavior: smooth; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
@@ -1019,7 +1022,7 @@ pre code { background: none; padding: 0; font-size: 0.9rem; border-radius: 0; }
     transform: translateY(-7.5px) rotate(-45deg);
   }
 
-  .page-content { padding-top: 3rem; }
+  .page-content { flex: 1; padding-top: 3rem; }
   .home-hero { padding: 3rem 0 1.5rem; }
   .lab-title { font-size: 2.2rem; }
   html { font-size: 15px; }
