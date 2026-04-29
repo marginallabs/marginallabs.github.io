@@ -35,7 +35,7 @@ subscribe: true
       </span>
     {% endif %}
     {% if post.abstract %}
-      <p class="post-excerpt">{{ post.abstract }}</p>
+      <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
     {% endif %}
   </article>
 {% endfor %}
