@@ -2,7 +2,7 @@
 layout: post
 title: "Data Cleaning in R: The 80% Problem"
 date: 2026-04-15
-categories: [r, general]
+categories: [r, general, statistics]
 abstract: "Data scientists spend 80% of their time cleaning data. This post shares a practical workflow for wrangling messy datasets in R."
 ---
 

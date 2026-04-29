@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Histograms in R with ggplot2"
 date: 2026-04-03
-categories: [r, econometrics]
+categories: [r, econometrics, statistics]
 abstract: "A short tutorial on producing publication-quality histograms in R using ggplot2, with tips on bin width and overlaying density curves."
 ---
 
