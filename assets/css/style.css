@@ -547,7 +547,7 @@ details[open] > .section-toggle .toggle-chevron {
 }
 .post-title-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   margin: 0.2em 0;
 }
