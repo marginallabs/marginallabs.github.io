@@ -418,6 +418,21 @@ details[open] > .section-toggle .toggle-chevron {
 .search-box input:focus {
   border-color: var(--color-accent);
 }
+.search-sort {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  padding: 0.3em 0.5em;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-text-light);
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}
+.search-sort:focus {
+  border-color: var(--color-accent);
+}
 .search-clear {
   position: absolute;
   right: 0.6em;

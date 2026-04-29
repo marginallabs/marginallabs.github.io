@@ -8,6 +8,14 @@ subscribe: true
 <div class="search-box">
   <input type="text" id="search-input" placeholder="Search posts..." autocomplete="off">
   <span class="search-clear" id="search-clear">&times;</span>
+  <select class="search-sort" id="search-sort">
+    <option value="default">Default</option>
+    <option value="newest">Newest first</option>
+    <option value="oldest">Oldest first</option>
+    <option value="shortest">Shortest read</option>
+    <option value="longest">Longest read</option>
+    <option value="relevance">Relevance</option>
+  </select>
 </div>
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
@@ -28,8 +36,9 @@ subscribe: true
 
 <div id="post-list">
 {% for post in site.posts %}
-  <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}">
-    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
+  {% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %}
+  <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-reading-time="{{ rt }}">
+    <span class="post-date">{{ post.date | date: "%B %d, %Y" }} &middot; {{ rt }} min read</span>
     <div class="post-title-row">
       {% if post.image %}<a href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" /></a>{% endif %}
       <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -50,6 +59,7 @@ subscribe: true
 
 <script>
 (function() {
+  var sortSelect = document.getElementById('search-sort');
   var input = document.getElementById('search-input');
   var clear = document.getElementById('search-clear');
   var list = document.getElementById('post-list');
@@ -199,15 +209,29 @@ subscribe: true
 
       if (textMatch && catMatch) {
         var score = hasQuery ? relevanceScore(combined, parsed) : 0;
-        results.push({ item: item, score: score, date: item.getAttribute('data-date') });
+        results.push({ item: item, score: score, date: item.getAttribute('data-date'), rt: parseInt(item.getAttribute('data-reading-time')) || 1 });
       }
     });
 
-    // Sort: relevance when searching, date when not
-    if (hasQuery) {
+    // Sort
+    var sortBy = sortSelect.value;
+    if (sortBy === 'relevance' && hasQuery) {
       results.sort(function(a, b) { return b.score - a.score || b.date.localeCompare(a.date); });
-    } else {
+    } else if (sortBy === 'oldest') {
+      results.sort(function(a, b) { return a.date.localeCompare(b.date); });
+    } else if (sortBy === 'shortest') {
+      results.sort(function(a, b) { return a.rt - b.rt || b.date.localeCompare(a.date); });
+    } else if (sortBy === 'longest') {
+      results.sort(function(a, b) { return b.rt - a.rt || b.date.localeCompare(a.date); });
+    } else if (sortBy === 'newest') {
       results.sort(function(a, b) { return b.date.localeCompare(a.date); });
+    } else {
+      // default: relevance when searching, newest when not
+      if (hasQuery) {
+        results.sort(function(a, b) { return b.score - a.score || b.date.localeCompare(a.date); });
+      } else {
+        results.sort(function(a, b) { return b.date.localeCompare(a.date); });
+      }
     }
 
     // Reorder DOM
@@ -243,11 +267,13 @@ subscribe: true
     var params = new URLSearchParams();
     if (q) params.set('q', q);
     if (activeCategories.length > 0) params.set('cats', activeCategories.join(','));
+    if (sortSelect.value !== 'default') params.set('sort', sortSelect.value);
     var newUrl = params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname;
     history.replaceState(null, '', newUrl);
   }
 
   input.addEventListener('input', search);
+  sortSelect.addEventListener('change', search);
   clear.addEventListener('click', function() { input.value = ''; search(); input.focus(); });
 
   buttons.forEach(function(btn) {
@@ -277,6 +303,9 @@ subscribe: true
         if (btn.getAttribute('data-category') === cat) btn.classList.add('active');
       });
     });
+  }
+  if (params.get('sort')) {
+    sortSelect.value = params.get('sort');
   }
   search();
 })();
