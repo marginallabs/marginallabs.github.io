@@ -28,7 +28,7 @@ subscribe: true
   <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}">
     <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
     <div class="post-title-row">
-      {% if post.image %}<img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" />{% endif %}
+      {% if post.image %}<a href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" /></a>{% endif %}
       <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </div>
     {% if post.categories %}
