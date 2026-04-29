@@ -5,8 +5,8 @@ layout: default
 {% assign reading_time = words | divided_by: 200 | at_least: 1 %}
 <article class="post">
   <header class="post-header">
-    {% if page.image %}<img class="post-thumbnail" src="{{ page.image | relative_url }}" alt="Thumbnail for {{ page.title }}" />{% endif %}
-    <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-thumbnail-wrapper" style="text-align:center; margin:1em 0;"><img class="post-thumbnail" src="{{ page.image | relative_url }}" alt="Thumbnail for {{ page.title }}" /></div>
     <div class="post-meta">
       <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
       {% if page.categories %}
