@@ -8,13 +8,13 @@ subscribe: true
 <div class="search-box">
   <input type="text" id="search-input" placeholder="Search posts..." autocomplete="off">
   <span class="search-clear" id="search-clear">&times;</span>
+  <span class="search-sort-label">Sort by:</span>
   <select class="search-sort" id="search-sort">
     <option value="default">Default</option>
     <option value="newest">Newest first</option>
     <option value="oldest">Oldest first</option>
     <option value="shortest">Shortest read</option>
     <option value="longest">Longest read</option>
-    <option value="relevance">Relevance</option>
   </select>
 </div>
 
