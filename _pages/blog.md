@@ -88,7 +88,7 @@ subscribe: true
       var excerpt = item.getAttribute('data-excerpt');
 
       var textMatch = !q || title.indexOf(q) !== -1 || excerpt.indexOf(q) !== -1 || cats.some(function(c) { return c.indexOf(q) !== -1; });
-      var catMatch = activeCategories.length === 0 || activeCategories.some(function(c) { return cats.indexOf(c) !== -1; });
+      var catMatch = activeCategories.length === 0 || activeCategories.every(function(c) { return cats.indexOf(c) !== -1; });
 
       var show = textMatch && catMatch;
       item.style.display = show ? '' : 'none';
