@@ -20,7 +20,7 @@ layout: default
           {% if post.image %}<a href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" /></a>{% endif %}
           <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </div>
-        {% if post.categories %}<span class="post-category-badges">{% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}{% if post.categories.size > 4 %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}</span>{% endif %}
+        {% if post.categories %}<span class="post-category-badges">{% if post.categories.size <= 5 %}{% for cat in post.categories %}<span class="category-tag">{{ cat }}</span>{% endfor %}{% else %}{% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}</span>{% endif %}
         {% if post.abstract %}
           <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
         {% endif %}
