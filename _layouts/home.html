@@ -13,19 +13,14 @@ layout: default
   </div>
   <section class="recent-posts">
     <h2>Recent Posts</h2>
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts limit:3 %}
       <article class="blog-list-item">
         <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
         <div class="post-title-row">
           {% if post.image %}<a href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" /></a>{% endif %}
           <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </div>
-        {% if post.categories %}
-          <span class="post-category-badges">
-            {% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}
-            {% if post.categories.size > 4 %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}
-          </span>
-        {% endif %}
+        {% if post.categories %}<span class="post-category-badges">{% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}{% if post.categories.size > 4 %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}</span>{% endif %}
         {% if post.abstract %}
           <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
         {% endif %}
@@ -34,7 +29,7 @@ layout: default
     {% if site.posts.size == 0 %}
       <p>No posts yet. Stay tuned!</p>
     {% endif %}
-    {% if site.posts.size > 5 %}
+    {% if site.posts.size > 3 %}
       <p class="more-link"><a href="{{ '/blog/' | relative_url }}">See all posts &rarr;</a></p>
     {% endif %}
   </section>
