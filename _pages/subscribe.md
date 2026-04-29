@@ -116,5 +116,50 @@ permalink: /subscribe/
       setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
     });
   });
+
+  document.querySelectorAll('.rss-guide details').forEach(function(detail) {
+    var summary = detail.querySelector('.section-toggle');
+    var wrapper = detail.querySelector('.section-content-wrapper');
+    if (!summary || !wrapper) return;
+
+    summary.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (detail.open) {
+        wrapper.style.gridTemplateRows = '1fr';
+        requestAnimationFrame(function() {
+          wrapper.style.gridTemplateRows = '0fr';
+        });
+        var done = false;
+        function finish(e) {
+          if (done) return;
+          if (e && e.propertyName !== 'grid-template-rows') return;
+          done = true;
+          wrapper.removeEventListener('transitionend', finish);
+          detail.open = false;
+          wrapper.style.gridTemplateRows = '';
+        }
+        wrapper.addEventListener('transitionend', finish);
+        setTimeout(finish, 400);
+      } else {
+        detail.open = true;
+        wrapper.style.gridTemplateRows = '0fr';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            wrapper.style.gridTemplateRows = '1fr';
+          });
+        });
+        var done2 = false;
+        function finish2(e) {
+          if (done2) return;
+          if (e && e.propertyName !== 'grid-template-rows') return;
+          done2 = true;
+          wrapper.removeEventListener('transitionend', finish2);
+          wrapper.style.gridTemplateRows = '';
+        }
+        wrapper.addEventListener('transitionend', finish2);
+        setTimeout(finish2, 400);
+      }
+    });
+  });
 })();
 </script>
