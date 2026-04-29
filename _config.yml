@@ -26,7 +26,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      image: /assets/img/favicon.svg
   - scope:
       path: "_pages"
       type: "pages"
