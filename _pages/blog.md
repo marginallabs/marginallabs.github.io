@@ -21,6 +21,7 @@ subscribe: true
   {% for cat in unique_categories %}
     <button class="cat-filter-btn" data-category="{{ cat | downcase }}">{{ cat }}</button>
   {% endfor %}
+  <button class="cat-filter-btn cat-more-toggle" id="cat-more-toggle">More...</button>
 </div>
 
 <div id="post-list">
@@ -56,8 +57,32 @@ subscribe: true
   var clear = document.getElementById('search-clear');
   var items = document.querySelectorAll('.blog-list-item');
   var noResults = document.getElementById('no-results');
-  var buttons = document.querySelectorAll('.cat-filter-btn');
+  var buttons = document.querySelectorAll('.cat-filter-btn:not(.cat-more-toggle)');
   var activeCategories = [];
+
+  // Category expand/collapse
+  var VISIBLE_COUNT = 6;
+  var allBtns = Array.from(buttons);
+  var moreToggle = document.getElementById('cat-more-toggle');
+  var expanded = false;
+
+  function updateCatVisibility() {
+    allBtns.forEach(function(btn, i) {
+      btn.style.display = (!expanded && i >= VISIBLE_COUNT) ? 'none' : '';
+    });
+    if (allBtns.length <= VISIBLE_COUNT) {
+      moreToggle.style.display = 'none';
+    } else {
+      moreToggle.style.display = '';
+      moreToggle.textContent = expanded ? 'Less...' : 'More...';
+    }
+  }
+  updateCatVisibility();
+
+  moreToggle.addEventListener('click', function() {
+    expanded = !expanded;
+    updateCatVisibility();
+  });
 
   function search() {
     var q = input.value.toLowerCase().trim();
@@ -67,7 +92,7 @@ subscribe: true
       var cats = item.getAttribute('data-categories').split(',');
       var excerpt = item.getAttribute('data-excerpt');
 
-      var textMatch = !q || title.indexOf(q) !== -1 || excerpt.indexOf(q) !== -1;
+      var textMatch = !q || title.indexOf(q) !== -1 || excerpt.indexOf(q) !== -1 || cats.some(function(c) { return c.indexOf(q) !== -1; });
       var catMatch = activeCategories.length === 0 || activeCategories.some(function(c) { return cats.indexOf(c) !== -1; });
 
       var show = textMatch && catMatch;
