@@ -10,6 +10,7 @@ permalink: /subscribe/
       <h2 class="section-title-row">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></h2>
       <svg class="toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
+    <div class="section-content-wrapper">
     <div class="section-content">
       <p>Subscribe to new posts from Marginal Lab via RSS Feed — delivered automatically to your reader!</p>
 
@@ -90,6 +91,7 @@ permalink: /subscribe/
       <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription.</p>
       <p class="rss-footnote"><sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
     </div>
+    </div>
   </details>
 
   <details>
@@ -97,8 +99,10 @@ permalink: /subscribe/
       <h2>Other Subscribing Methods</h2>
       <svg class="toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
+    <div class="section-content-wrapper">
     <div class="section-content">
       <p>Coming Soon—Stay Tuned!</p>
+    </div>
     </div>
   </details>
 </div>
@@ -110,57 +114,6 @@ permalink: /subscribe/
     navigator.clipboard.writeText('https://marginallabs.github.io/feed.xml').then(function() {
       btn.textContent = 'Copied!';
       setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
-    });
-  });
-
-  document.querySelectorAll('.rss-guide details').forEach(function(detail) {
-    var summary = detail.querySelector('.section-toggle');
-    var content = detail.querySelector('.section-content');
-    if (!content) return;
-
-    summary.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (detail.open) {
-        var h = content.scrollHeight;
-        content.style.height = h + 'px';
-        content.style.willChange = 'height, opacity';
-        requestAnimationFrame(function() {
-          content.style.height = '0px';
-          content.style.opacity = '0';
-        });
-        var done = false;
-        function finish() {
-          if (done) return;
-          done = true;
-          content.removeEventListener('transitionend', finish);
-          detail.open = false;
-          content.style.height = '';
-          content.style.opacity = '';
-          content.style.willChange = '';
-        }
-        content.addEventListener('transitionend', finish);
-        setTimeout(finish, 350);
-      } else {
-        detail.open = true;
-        content.style.height = '0px';
-        content.style.opacity = '0';
-        content.style.willChange = 'height, opacity';
-        requestAnimationFrame(function() {
-          content.style.height = content.scrollHeight + 'px';
-          content.style.opacity = '1';
-        });
-        var done2 = false;
-        function finish2() {
-          if (done2) return;
-          done2 = true;
-          content.removeEventListener('transitionend', finish2);
-          content.style.height = '';
-          content.style.opacity = '';
-          content.style.willChange = '';
-        }
-        content.addEventListener('transitionend', finish2);
-        setTimeout(finish2, 350);
-      }
     });
   });
 })();
