@@ -436,7 +436,7 @@ details[open] > .section-toggle .toggle-chevron {
   margin-top: 1em;
 }
 .post-category-badges {
-  margin-left: 0.5em;
+  margin-left: 0;
 }
 .post-category-badges .category-tag {
   font-size: 0.7rem;
