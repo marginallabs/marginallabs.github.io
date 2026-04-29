@@ -15,7 +15,7 @@ layout: default
       {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
       {% for sp in series_posts %}
         {% if sp.url == page.url %}
-          <strong>Series:</strong> Part {{ forloop.index }} of {{ forloop.length }} &mdash; {{ page.series }}
+          <strong>Series:</strong> Part {{ forloop.index }} of {{ forloop.length }} &mdash; <a href="{{ page.series_url | default: '/blog/' | relative_url }}">{{ page.series }}</a>
         {% endif %}
       {% endfor %}
     </div>

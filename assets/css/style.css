@@ -960,6 +960,39 @@ img.figure-img {
   color: var(--color-text);
 }
 
+/* --- Series Page --- */
+.series-page-description {
+  font-style: italic;
+  color: var(--color-text-light);
+  margin: 0.5em 0 1em;
+}
+.series-page-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.series-page-list li {
+  padding: 0.8em 0;
+  border-bottom: 1px solid var(--color-bg-alt);
+}
+.series-page-list li:last-child { border-bottom: none; }
+.series-page-list li a {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.series-page-list li.current a {
+  color: var(--color-text);
+  pointer-events: none;
+}
+.series-page-post-meta {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 0.2em;
+}
+
 /* --- Responsive --- */
 /* --- 404 Page --- */
 .not-found {

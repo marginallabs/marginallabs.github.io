@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="page">
+  <div class="page-title-row">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+  {% if page.description %}
+  <p class="series-page-description">{{ page.description }}</p>
+  {% endif %}
+  <ol class="series-page-list">
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+    {% for sp in series_posts %}
+    <li{% if sp.url == page.url %} class="current"{% endif %}>
+      <a href="{{ sp.url | relative_url }}">{{ sp.title }}</a>
+      <div class="series-page-post-meta">{{ sp.date | date: "%B %d, %Y" }}{% if sp.abstract %} &middot; {{ sp.abstract | truncatewords: 20 }}{% endif %}</div>
+    </li>
+    {% endfor %}
+  </ol>
+</article>
