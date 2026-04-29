@@ -18,15 +18,14 @@ layout: default
         <span class="post-date">{{ post.date | date: "%B %d, %Y" }}{% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %} &middot; {{ rt }} min read</span>
         <div class="post-title-row">
           {% if post.image %}<img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" />{% endif %}
-          <div class="post-title-info">
-            <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            {% if post.categories %}
-              <span class="post-category-badges">
-                {% for cat in post.categories %}<span class="category-tag">{{ cat }}</span>{% endfor %}
-              </span>
-            {% endif %}
-          </div>
+          <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </div>
+        {% if post.categories %}
+          <span class="post-category-badges">
+            {% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}
+            {% if post.categories.size > 4 %}<span class="category-tag category-more">...</span>{% endif %}
+          </span>
+        {% endif %}
         {% if post.abstract %}
           <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
         {% endif %}
