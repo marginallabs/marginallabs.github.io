@@ -551,6 +551,13 @@ details[open] > .section-toggle .toggle-chevron {
   gap: 1rem;
   margin: 0.2em 0;
 }
+.post-title-info {
+  display: inline;
+  min-width: 0;
+}
+.post-title-info .post-category-badges {
+  margin-left: 0.5em;
+}
 .post-date {
   color: var(--color-text-light);
   font-size: 0.85rem;
