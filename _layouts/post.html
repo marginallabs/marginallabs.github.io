@@ -31,6 +31,11 @@ layout: default
     {% if page.abstract %}
       <p class="post-abstract">{{ page.abstract }}</p>
     {% endif %}
+    {% if page.image %}
+      <div class="post-thumbnail-content" style="text-align:center; margin:1em 0;">
+        <img class="post-thumbnail" src="{{ page.image | relative_url }}" alt="Thumbnail for {{ page.title }}" style="max-width:100%; height:auto;" />
+      </div>
+    {% endif %}
     {% if page.pdf %}
       <a class="pdf-download" href="{{ page.pdf | relative_url }}" target="_blank">Download PDF</a>
     {% endif %}
