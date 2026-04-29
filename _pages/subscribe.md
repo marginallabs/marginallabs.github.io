@@ -10,7 +10,6 @@ permalink: /subscribe/
       <h2 class="section-title-row">RSS Feed <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></h2>
       <svg class="toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
-    <div class="section-content-wrapper">
     <div class="section-content">
       <p>Subscribe to new posts from Marginal Lab via RSS Feed — delivered automatically to your reader!</p>
 
@@ -91,7 +90,6 @@ permalink: /subscribe/
       <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription.</p>
       <p class="rss-footnote"><sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
     </div>
-    </div>
   </details>
 
   <details>
@@ -99,10 +97,8 @@ permalink: /subscribe/
       <h2>Other Subscribing Methods</h2>
       <svg class="toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
-    <div class="section-content-wrapper">
     <div class="section-content">
       <p>Coming Soon—Stay Tuned!</p>
-    </div>
     </div>
   </details>
 </div>
@@ -119,45 +115,46 @@ permalink: /subscribe/
 
   document.querySelectorAll('.rss-guide details').forEach(function(detail) {
     var summary = detail.querySelector('.section-toggle');
-    var wrapper = detail.querySelector('.section-content-wrapper');
-    if (!summary || !wrapper) return;
+    var content = detail.querySelector('.section-content');
+    if (!summary || !content) return;
 
     summary.addEventListener('click', function(e) {
       e.preventDefault();
       if (detail.open) {
-        wrapper.style.gridTemplateRows = '1fr';
-        requestAnimationFrame(function() {
-          wrapper.style.gridTemplateRows = '0fr';
-        });
+        var h = content.getBoundingClientRect().height;
+        content.style.height = h + 'px';
+        content.style.opacity = '1';
+        content.offsetHeight; // force reflow
+        content.style.height = '0px';
+        content.style.opacity = '0';
         var done = false;
-        function finish(e) {
+        function finish() {
           if (done) return;
-          if (e && e.propertyName !== 'grid-template-rows') return;
           done = true;
-          wrapper.removeEventListener('transitionend', finish);
+          content.removeEventListener('transitionend', finish);
           detail.open = false;
-          wrapper.style.gridTemplateRows = '';
+          content.style.height = '';
+          content.style.opacity = '';
         }
-        wrapper.addEventListener('transitionend', finish);
-        setTimeout(finish, 400);
+        content.addEventListener('transitionend', finish);
+        setTimeout(finish, 350);
       } else {
         detail.open = true;
-        wrapper.style.gridTemplateRows = '0fr';
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            wrapper.style.gridTemplateRows = '1fr';
-          });
-        });
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        content.offsetHeight; // force reflow
+        content.style.height = content.scrollHeight + 'px';
+        content.style.opacity = '1';
         var done2 = false;
-        function finish2(e) {
+        function finish2() {
           if (done2) return;
-          if (e && e.propertyName !== 'grid-template-rows') return;
           done2 = true;
-          wrapper.removeEventListener('transitionend', finish2);
-          wrapper.style.gridTemplateRows = '';
+          content.removeEventListener('transitionend', finish2);
+          content.style.height = '';
+          content.style.opacity = '';
         }
-        wrapper.addEventListener('transitionend', finish2);
-        setTimeout(finish2, 400);
+        content.addEventListener('transitionend', finish2);
+        setTimeout(finish2, 350);
       }
     });
   });

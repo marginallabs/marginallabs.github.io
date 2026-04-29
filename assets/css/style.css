@@ -311,18 +311,9 @@ details[open] > .section-toggle .toggle-chevron {
   transform: rotate(180deg);
 }
 .section-content {
-  padding-top: 0.8em;
-}
-.section-content-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
-}
-details[open] > .section-content-wrapper {
-  grid-template-rows: 1fr;
-}
-.section-content-wrapper > .section-content {
   overflow: hidden;
+  transition: height 0.3s ease, opacity 0.25s ease;
+  padding-top: 0.8em;
 }
 .rss-guide details {
   margin-bottom: 0;
