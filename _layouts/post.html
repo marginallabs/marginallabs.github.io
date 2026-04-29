@@ -10,22 +10,21 @@ layout: default
       <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
       <span class="reading-time">{{ reading_time }} min read</span>
     </div>
+    {% if page.series %}
+    <div class="post-series-info">
+      {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+      {% for sp in series_posts %}
+        {% if sp.url == page.url %}
+          <strong>Series:</strong> Part {{ forloop.index }} of {{ forloop.length }} &mdash; {{ page.series }}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if page.categories %}
     <div class="post-tags">
       {% for cat in page.categories %}
         <span class="category-tag">{{ cat }}</span>
       {% endfor %}
-    </div>
-    {% endif %}
-    {% if page.series %}
-    <div>
-      {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
-      {% for sp in series_posts %}
-        {% if sp.url == page.url %}
-          <span class="series-badge">Part {{ forloop.index }} of {{ forloop.length }}</span>
-        {% endif %}
-      {% endfor %}
-      <span class="series-badge">{{ page.series }}</span>
     </div>
     {% endif %}
     {% if page.image %}
