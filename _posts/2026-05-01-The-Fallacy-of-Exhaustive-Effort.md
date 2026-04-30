@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "The Fallacy of Exhaustive Effort 2: Why Leaving No Stone Unturned Can Bury You"
-description: "The Fallacy of Exhaustive Effort 2: Why Leaving No Stone Unturned Can Bury You"
-date: 2026-04-30
-categories: [economics, microeconomics]
-type: blog
+title: "The Fallacy of Exhaustive Effort: Why Leaving No Stone Unturned Can Bury You"
+description: "The Fallacy of Exhaustive Effort: Why Leaving No Stone Unturned Can Bury You"
+date: 2026-05-01
+categories: 
+type: 
 abstract: "If satisfying all conditions for an optimal outcome is good, then satisfying as many as possible must be second best. This reasoning is false. When a constraint prevents one condition from being met, the remaining conditions are no longer individually desirable. Satisfying them can worsen the outcome. Drawing on the theory of the second best, we show that you should approach the problem in a different way."
 series: 
 series_url: 
-pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort-2.pdf
-image: /assets/img/thumbnails/The-Fallacy-of-Exhaustive-Effort-2-thumb.png
+pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort.pdf
+image: /assets/img/thumbnails/The-Fallacy-of-Exhaustive-Effort-thumb.png
 ---
 
 # The Prevailing Intuition
@@ -22,7 +22,7 @@ However, this argument is generally **not true**. In other words, it is not alwa
 
 Formally, suppose there are $n$ conditions, $c_1, c_2, \dots, c_n$. Satisfying all of them would lead to a favourable outcome $X$. Now, given that at least one of the conditions $c_k$ cannot be satisfied, should we try our best to satisfy all other conditions? Does this strategy bring us closer to the favourable outcome?
 
-![The second-best optimum  may require violating the remaining conditions]({{ site.baseurl }}/assets/img/posts/2026-04-30/fig_conditions.png){:.figure-img}
+![The second-best optimum  may require violating the remaining conditions]({{ site.baseurl }}/assets/img/posts/2026-05-01/fig_conditions.png){:.figure-img}
 *The second-best optimum $X^{\ast}$ may require violating the remaining conditions.*
 {: .figure-caption}
 
@@ -45,7 +45,7 @@ Of course, this is merely a metaphor to build intuition. Let us now examine some
 
 Imagine a society with a monopoly firm that pollutes the river. First, we often say *monopoly is bad*. It is because a monopoly would produce less output than a competitive market and hence set a price higher than that of a competitive market. It inflicts a loss on the consumers. Second, we often say *pollution is bad*. It is because the firm does not need to pay for the social cost of the pollution, and hence produces more than the optimal amount. It inflicts a loss on society.
 
-![Monopoly restricts output; pollution expands it]({{ site.baseurl }}/assets/img/posts/2026-04-30/fig_monopoly.png){:.figure-img}
+![Monopoly restricts output; pollution expands it]({{ site.baseurl }}/assets/img/posts/2026-05-01/fig_monopoly.png){:.figure-img}
 *Monopoly restricts output; pollution expands it.*
 {: .figure-caption}
 
@@ -90,7 +90,7 @@ The fallacy is exactly this. Because we want the outcome, we start to believe th
 
 The fallacy **flips the reasoning entirely**. Instead of asking "What does this outcome actually require?", you start asking "What outcome do these conditions guarantee?" The first question works backward from the goal. The second just hopes the goal somehow follows from the means.
 
-![The fallacy flips the reasoning direction]({{ site.baseurl }}/assets/img/posts/2026-04-30/fig_fallacy.png){:.figure-img}
+![The fallacy flips the reasoning direction]({{ site.baseurl }}/assets/img/posts/2026-05-01/fig_fallacy.png){:.figure-img}
 *The fallacy flips the reasoning direction.*
 {: .figure-caption}
 

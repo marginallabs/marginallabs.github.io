@@ -7,4 +7,5 @@ Gemfile.lock
 guide.md
 *.py
 *.tex
-template.md.ipynb_checkpoints/
+template.md
+.ipynb_checkpoints/
