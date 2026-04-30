@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Blog
-permalink: /blog/
-subscribe: true
+title: News
+permalink: /news/
 ---
 
 <div class="search-box">
@@ -39,11 +38,11 @@ subscribe: true
   {% for post in site.posts %}
     {% assign is_news = false %}
     {% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign is_news = true %}{% endif %}{% endfor %}
-    {% unless is_news %}
+    {% if is_news %}
       {% for cat in post.categories %}
         {% assign all_categories = all_categories | push: cat %}
       {% endfor %}
-    {% endunless %}
+    {% endif %}
   {% endfor %}
   {% assign unique_categories = all_categories | uniq | sort %}
   {% for cat in unique_categories %}
@@ -56,7 +55,7 @@ subscribe: true
 {% for post in site.posts %}
   {% assign is_news = false %}
   {% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign is_news = true %}{% endif %}{% endfor %}
-  {% unless is_news %}
+  {% if is_news %}
   {% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %}
   <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-reading-time="{{ rt }}">
     <span class="post-date">{{ post.date | date: "%B %d, %Y" }} &middot; {{ rt }} min read</span>
@@ -69,13 +68,15 @@ subscribe: true
       <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
     {% endif %}
   </article>
-  {% endunless %}
+  {% endif %}
 {% endfor %}
 </div>
 
-{% if site.posts.size == 0 %}
-  <p>No posts yet. Stay tuned!</p>
-{% endif %}
+{% assign has_news = false %}
+{% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign has_news = true %}{% endif %}{% endfor %}{% endfor %}
+{% unless has_news %}
+  <p>No news yet. Stay tuned!</p>
+{% endunless %}
 
 <p class="no-results" id="no-results" style="display:none;">No posts found.</p>
 
@@ -251,8 +252,8 @@ subscribe: true
     history.replaceState(null, '', newUrl);
 
     // Persist sort/per-page in localStorage
-    localStorage.setItem('blog_sort', sortSelect.value);
-    localStorage.setItem('blog_per_page', perPageSelect.value);
+    localStorage.setItem('news_sort', sortSelect.value);
+    localStorage.setItem('news_per_page', perPageSelect.value);
   }
 
   input.addEventListener('input', function() { currentPage = 1; search(); });
@@ -290,9 +291,9 @@ subscribe: true
     });
   }
   if (params.get('sort')) sortSelect.value = params.get('sort');
-  else if (localStorage.getItem('blog_sort')) sortSelect.value = localStorage.getItem('blog_sort');
+  else if (localStorage.getItem('news_sort')) sortSelect.value = localStorage.getItem('news_sort');
   if (params.get('per_page')) perPageSelect.value = params.get('per_page');
-  else if (localStorage.getItem('blog_per_page')) perPageSelect.value = localStorage.getItem('blog_per_page');
+  else if (localStorage.getItem('news_per_page')) perPageSelect.value = localStorage.getItem('news_per_page');
   if (params.get('page')) currentPage = parseInt(params.get('page'));
   search();
 })();
