@@ -4,6 +4,7 @@ title: "Marginal Lab Is Now Live"
 date: 2026-04-09
 categories: [general]
 type: news
+permalink: /news/:title/
 abstract: "Welcome to Marginal Lab. This post explains the motivation behind the blog and what you can expect going forward."
 ---
 
