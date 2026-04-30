@@ -7,7 +7,8 @@ layout: default
     <h1 class="lab-title">Marginal Lab</h1>
     <p class="lab-tagline">Rational People <span class="tagline-highlight">Think at the Margin</span><br><span class="tagline-author">— N. Gregory Mankiw</span></p>
     <p class="lab-description">
-      A lab exploring economic ideas, and what happens when they meet real life.
+      <span class="desc-line" data-delay="1700">A lab exploring economic ideas,</span><br>
+      <span class="desc-line" data-delay="4600">and what happens when they meet real life.</span>
     </p>
   </div>
   <section class="recent-posts">
@@ -53,3 +54,24 @@ layout: default
     <p class="more-link"><a href="{{ '/blog/' | relative_url }}">See all blogs &rarr;</a></p>
   </section>
 </div>
+<script>
+(function() {
+  document.querySelectorAll('.desc-line').forEach(function(line) {
+    var text = line.textContent;
+    line.textContent = '';
+    for (var i = 0; i < text.length; i++) {
+      var span = document.createElement('span');
+      span.className = 'desc-char';
+      span.textContent = text[i] === ' ' ? ' ' : text[i];
+      line.appendChild(span);
+    }
+  });
+  document.querySelectorAll('.desc-line').forEach(function(line) {
+    var delay = parseInt(line.getAttribute('data-delay')) || 1700;
+    var chars = line.querySelectorAll('.desc-char');
+    chars.forEach(function(ch, i) {
+      setTimeout(function() { ch.classList.add('visible'); }, delay + i * 55);
+    });
+  });
+})();
+</script>
