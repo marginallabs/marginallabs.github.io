@@ -8,21 +8,28 @@ subscribe: true
 <div class="search-box">
   <input type="text" id="search-input" placeholder="Search posts..." autocomplete="off">
   <span class="search-clear" id="search-clear">&times;</span>
-  <span class="search-sort-label">Sort by:</span>
-  <select class="search-sort" id="search-sort">
-    <option value="default">Default</option>
-    <option value="newest">Newest first</option>
-    <option value="oldest">Oldest first</option>
-    <option value="shortest">Shortest read</option>
-    <option value="longest">Longest read</option>
-  </select>
-  <span class="search-sort-label">Show:</span>
-  <select class="search-sort" id="per-page">
-    <option value="10">10</option>
-    <option value="5">5</option>
-    <option value="20">20</option>
-    <option value="0">All</option>
-  </select>
+</div>
+
+<div class="search-controls">
+  <div class="search-controls-left">
+    <span class="search-sort-label">Sort by:</span>
+    <select class="search-sort" id="search-sort">
+      <option value="default">Default</option>
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="shortest">Shortest read</option>
+      <option value="longest">Longest read</option>
+    </select>
+  </div>
+  <div class="search-controls-right">
+    <span class="search-sort-label">Show:</span>
+    <select class="search-sort" id="per-page">
+      <option value="5" selected>5 per page</option>
+      <option value="10">10 per page</option>
+      <option value="20">20 per page</option>
+      <option value="0">All posts</option>
+    </select>
+  </div>
 </div>
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
@@ -230,7 +237,7 @@ subscribe: true
     if (q) params.set('q', q);
     if (activeCategories.length > 0) params.set('cats', activeCategories.join(','));
     if (sortSelect.value !== 'default') params.set('sort', sortSelect.value);
-    if (perPageSelect.value !== '10') params.set('per_page', perPageSelect.value);
+    if (perPageSelect.value !== '5') params.set('per_page', perPageSelect.value);
     if (currentPage > 1) params.set('page', currentPage);
     var newUrl = params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname;
     history.replaceState(null, '', newUrl);
