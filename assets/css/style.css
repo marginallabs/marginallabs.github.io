@@ -386,6 +386,10 @@ details[open] > .section-toggle .toggle-chevron {
   color: var(--color-text-light);
   margin: 0.3em 0 0 0.2em;
 }
+.post-content .footnotes {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
 .rss-readers-table .info-trigger {
   display: inline-flex;
   align-items: center;
