@@ -8,7 +8,7 @@ The views and opinions expressed on this site are those of the authors and do no
 
 This site uses local browser storage to improve your experience. No personal data is collected, stored on any server, or shared with third parties.
 
-1. **localStorage** is used to remember:
+1. **`localStorage`** is used to remember:
 
    1. Your theme preference (light or dark mode)
    2. Your blog sort preference (e.g., newest first)
