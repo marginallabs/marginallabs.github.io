@@ -261,13 +261,19 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   color: var(--color-text-light);
   font-style: italic;
   display: inline-block;
-  margin-left: 14em;
+  margin-left: 0;
 }
 .lab-description {
   font-size: 1rem;
   color: var(--color-text-light);
   max-width: 520px;
   margin: 0 auto;
+  clip-path: inset(0 100% 0 0);
+  animation: reveal-text 1s ease forwards 1.7s;
+}
+@keyframes reveal-text {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
 }
 
 /* --- Recent Posts --- */
