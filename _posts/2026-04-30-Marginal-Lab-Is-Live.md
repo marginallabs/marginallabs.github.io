@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Marginal Lab Is Live"
-date: 2026-04-30
+date: 2026-05-01
 categories: [launch]
 type: news
 permalink: /news/:title/
-abstract: "Marginal Lab has officially launched — a blog about economic thinking, econometrics, and the logic behind everyday decisions."
+abstract: "Marginal Lab has officially launched. Check out what we offers!"
 ---
 
 <blockquote style="font-style: italic; text-align: left; margin-left: auto; margin-right: auto; width: fit-content;">
@@ -17,30 +17,29 @@ where ideas accrue.
 
 </blockquote>
 
-Marginal Lab is now live. This is a blog about economic thinking — not just what economists study, but *how* they reason.
+**Marginal Lab** is now live. This is a lab about economic thinking — not just what economists study, but how they *reason*.
 
-The name comes from the concept of thinking at the margin: the idea that decisions are shaped by the next unit, not the average. Should you study one more hour? Should the government fund one more program? The answer always depends on what that marginal unit costs and what it delivers.
+Whether you have never taken an economics class or just want to see familiar ideas in a new light, this blog is written for you. No jargon, no prerequisites — just clear thinking about the decisions that shape our lives. See more at [About](/about/).
 
 # What You Will Find Here
 
 Expect a mix of content across three broad areas:
 
-- **Essays on economic reasoning** — from sunk cost fallacies to happiness economics, applying the marginal lens to everyday decisions and public policy
-- **Methods and tools** — demystifying regression, experiments, and how economists actually draw conclusions
-- **Software tutorials** — hands-on tips for R and Stata, aimed at economics students who need to get things done
+- **Essays** — Applying various economic theories to everyday problems
+- **Tutorials** — Demystifying regression, experiments, and how economists actually draw conclusions
+- **Deep dive** — Thoughtful explorations of theory, philosophy, and the occasional puzzle that makes you rethink what you know
 
 # Site Features
 
 A few things worth knowing as a reader:
 
-- **Search and filter** — every post on the blog and news pages is searchable by keyword with Google-style query syntax. Filter by category, sort by date or reading time, and bookmark your search state via URL
-- **Reading progress and estimated time** — each post shows how long it takes to read, and a progress bar tracks your scroll position
-- **Dark mode** — toggle between light and dark themes; your preference is saved for future visits
-- **Subscribe via RSS** — head to the Subscribe page for a quick RSS setup guide with popular readers
-- **Post series** — some topics are organized into series (e.g., *The Tools of Economics*) with dedicated navigation so you can follow along in order
-- **Share and print** — share buttons for every major platform, and a clean print stylesheet for offline reading
-- **Visited post tracking** — posts you have already read appear in a muted color so you can spot new content at a glance
+- **Dark mode** — Toggle between light and dark themes with the navigation bar
+- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax.[^1] Filter by category, sort by date or reading time.
+- **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
+- **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
 
 # What Is Next
 
-More posts are on the way — including new entries in the *Tools of Economics* series and the *Fallacy* collection. If you have a topic you would like to see covered, feel free to reach out at [marginallab@proton.me](mailto:marginallab@proton.me).
+More posts are on the way! If you have a topic you would like to see covered, feel free to reach out at [marginallab@proton.me](mailto:marginallab@proton.me).
+
+[^1]: Google-style query syntax lets you refine your search: type multiple words for an AND search (e.g., `sunk cost`), wrap phrases in quotes for exact matches (e.g., `"second best"`), and use a minus sign to exclude terms (e.g., `-fallacy`). [Learn More](https://support.google.com/websearch/answer/2466433)
