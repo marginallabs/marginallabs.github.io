@@ -3,6 +3,7 @@ layout: post
 title: "Happiness Economics: Can We Measure Well-Being?"
 date: 2026-04-27
 categories: [economics, research, philosophy, public-policy, microeconomics]
+type: blog
 abstract: "Happiness economics challenges the assumption that utility is unobservable. Survey data on life satisfaction is now mainstream in policy analysis."
 ---
 

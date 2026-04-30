@@ -3,6 +3,7 @@ layout: post
 title: "Running Your First Regression in Stata"
 date: 2026-04-05
 categories: [stata, econometrics, statistics]
+type: blog
 abstract: "A beginner-friendly guide to OLS regression in Stata, from loading data to interpreting output and diagnostic checks."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "The Tools of Economics: Regression"
 date: 2026-04-28
 categories: [economics, econometrics, methodology]
+type: blog
 series: "The Tools of Economics"
 series_url: /series/the-tools-of-economics/
 abstract: "Regression is the workhorse of empirical economics. This post introduces the basic framework and what it can and cannot tell you."

@@ -117,7 +117,7 @@ layout: default
     <ul class="related-posts-list">
       {% assign related = "" | split: "" %}
       {% for post in site.posts %}
-        {% if post.url != page.url %}
+        {% if post.url != page.url and post.type == page.type %}
           {% assign shared = 0 %}
           {% for cat in page.categories %}
             {% if post.categories contains cat %}

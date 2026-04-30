@@ -3,6 +3,7 @@ layout: post
 title: "How to Read an Economics Paper"
 date: 2026-04-17
 categories: [economics, research, general, methodology]
+type: blog
 abstract: "Reading academic papers is a skill. This post outlines a structured approach: abstract first, conclusion second, then the details."
 ---
 

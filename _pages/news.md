@@ -36,9 +36,7 @@ permalink: /news/
 <div class="category-filters" id="category-filters">
   {% assign all_categories = "" | split: "" %}
   {% for post in site.posts %}
-    {% assign is_news = false %}
-    {% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign is_news = true %}{% endif %}{% endfor %}
-    {% if is_news %}
+    {% if post.type == 'news' %}
       {% for cat in post.categories %}
         {% assign all_categories = all_categories | push: cat %}
       {% endfor %}
@@ -53,9 +51,7 @@ permalink: /news/
 
 <div id="post-list">
 {% for post in site.posts %}
-  {% assign is_news = false %}
-  {% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign is_news = true %}{% endif %}{% endfor %}
-  {% if is_news %}
+  {% if post.type == 'news' %}
   {% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %}
   <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-reading-time="{{ rt }}">
     <span class="post-date">{{ post.date | date: "%B %d, %Y" }} &middot; {{ rt }} min read</span>
@@ -73,7 +69,7 @@ permalink: /news/
 </div>
 
 {% assign has_news = false %}
-{% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'general' or cat == 'update' %}{% assign has_news = true %}{% endif %}{% endfor %}{% endfor %}
+{% for post in site.posts %}{% if post.type == 'news' %}{% assign has_news = true %}{% endif %}{% endfor %}
 {% unless has_news %}
   <p>No news yet. Stay tuned!</p>
 {% endunless %}

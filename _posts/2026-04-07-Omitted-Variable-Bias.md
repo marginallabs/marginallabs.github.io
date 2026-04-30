@@ -3,6 +3,7 @@ layout: post
 title: "Omitted Variable Bias: The Silent Killer of Your Estimates"
 date: 2026-04-07
 categories: [economics, econometrics, research, methodology]
+type: blog
 abstract: "When you leave out a relevant variable, your coefficients are biased. This post explains why, when it happens, and how to fix it."
 ---
 
