@@ -4,12 +4,17 @@ title: About
 permalink: /about/
 ---
 
-**Marginal Lab** is a blog about economic thinking — not just what economists study, but how they reason.
+**Marginal Lab** is a lab about economic thinking — not just what economists study, but how they reason.
 
+The name comes from the concept of *thinking at the margin*: the idea that decisions are shaped by the next unit. Should you study one more hour? Should the government fund one more program? The answer always depends on what that *marginal* (extra) unit costs and what it delivers. The logo features the partial derivative symbol (**∂**), representing the concept of marginal analysis. 
 
-The name comes from the concept of *thinking at the margin*: the idea that decisions are shaped by the next unit. Should you study one more hour? Should the government fund one more program? The answer always depends on what that *marginal* unit costs and what it delivers. The logo features the partial derivative symbol (**∂**), representing the concept of marginal analysis, highlighting how we think and analyze problems at its edge.
+# What You Will Find Here
 
-This blog applies that lens to economics, policy, and everyday decisions. Expect a mix of essays, tutorials, and the occasional deep dive into economic theory.
+Expect a mix of content across three broad areas:
+
+- **Essays** — Applying various economic theories to everyday problems
+- **Tutorials** — Demystifying regression, experiments, and how economists actually draw conclusions
+- **Deep dive** — Thoughtful explorations of theory, philosophy, and the occasional puzzle that makes you rethink what you know
 
 ## Contacts
 
