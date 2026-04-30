@@ -242,14 +242,14 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   margin: 0 0 0.8em;
 }
 .tagline-highlight {
-  background: linear-gradient(90deg, rgba(45,80,22,0.5) 0%, rgba(45,80,22,0.5) 100%) no-repeat left;
+  background: linear-gradient(90deg, #66ff00 0%, #66ff00 100%) no-repeat left;
   background-size: 0% 100%;
   animation: highlight-sweep 1.2s ease forwards 0.3s;
   padding: 0 0.15em;
   border-radius: 2px;
 }
 [data-theme="dark"] .tagline-highlight {
-  background: linear-gradient(90deg, rgba(143,168,122,0.5) 0%, rgba(143,168,122,0.5) 100%) no-repeat left;
+  background: linear-gradient(90deg, #66ff00 0%, #66ff00 100%) no-repeat left;
   background-size: 0% 100%;
 }
 @keyframes highlight-sweep {
