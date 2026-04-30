@@ -5,7 +5,7 @@ date: 2026-05-01
 categories: [launch, features]
 type: news
 permalink: /news/:title/
-abstract: "Marginal Lab has officially launched. Check out what we offers!"
+abstract: "Marginal Lab has officially launched. Check out what we offer!"
 ---
 
 <blockquote style="font-style: italic; text-align: left; margin-left: auto; margin-right: auto; width: fit-content;">
@@ -26,11 +26,11 @@ Whether you have never taken an economics class or just want to see familiar ide
 A few things worth knowing as a reader:
 
 - **Dark mode** — Toggle between light and dark themes with the navigation bar
-- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax.[^1] Filter by category, sort by date or reading time.
+- **Search and filter** — Instant, real-time search across all posts with Google-style query syntax.<sup>1</sup> Filter by category, sort by date or reading time.
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
 
-[^1]: Multiple words = AND search (e.g., `sunk cost`). Exact Match (`"word or phrase"`): Forces results to include that exact term. Exclude (`-word`): Removes results containing a specific word. [Learn More](https://support.google.com/websearch/answer/2466433)
+<p class="inline-footnote"><sup>1</sup> Multiple words = AND search (e.g., <code>sunk cost</code>). Exact Match (<code>"word or phrase"</code>): Forces results to include that exact term. Exclude (<code>-word</code>): Removes results containing a specific word. <a href="https://support.google.com/websearch/answer/2466433">Learn More</a></p>
 
 
 # What Is Next
