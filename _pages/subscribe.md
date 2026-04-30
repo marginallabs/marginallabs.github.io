@@ -89,6 +89,7 @@ permalink: /subscribe/
       </div>
       <p class="rss-footnote"><sup>&dagger;</sup>Offline reading requires a Pro subscription.</p>
       <p class="rss-footnote"><sup>&Dagger;</sup>Free tier limited to 10 feeds; unlimited requires subscription.</p>
+      <br>
     </div>
   </details>
 
