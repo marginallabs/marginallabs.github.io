@@ -33,6 +33,7 @@ subscribe: true
 </div>
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
+<br>
 
 <div class="category-filters" id="category-filters">
   {% assign all_categories = "" | split: "" %}
