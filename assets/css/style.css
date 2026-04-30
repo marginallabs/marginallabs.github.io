@@ -896,11 +896,16 @@ img.figure-img {
 /* --- Share Buttons --- */
 .share-bar {
   display: flex;
-  align-items: center;
-  gap: 0.6em;
+  flex-direction: column;
+  gap: 0.3em;
   margin: 1.5em 0;
   padding-top: 1em;
   border-top: 1px solid var(--color-border);
+}
+.subscribe-row, .share-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
 }
 .share-label {
   font-family: var(--font-heading);
