@@ -4,6 +4,7 @@ title: "Endogeneity and Instrumental Variables"
 date: 2026-04-11
 categories: [economics, econometrics, research, fallacy, methodology]
 type: blog
+permalink: /blog/:title/
 abstract: "Endogeneity makes OLS inconsistent. Instrumental variables can rescue your estimates — if you can find a valid instrument."
 ---
 

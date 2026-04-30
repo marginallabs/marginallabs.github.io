@@ -4,6 +4,7 @@ title: "A Gentle Introduction to Elasticity"
 date: 2026-04-01
 categories: [economics, econometrics, microeconomics]
 type: blog
+permalink: /blog/:title/
 abstract: "Elasticity measures how responsive one variable is to changes in another. This post walks through the intuition and the math behind price elasticity of demand."
 ---
 

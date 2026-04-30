@@ -4,6 +4,7 @@ title: "Policy Evaluation in a Second-Best World"
 date: 2026-04-19
 categories: [economics, econometrics, research, fallacy, stata, r, public-policy, experiment, causal-inference, welfare, regulation, labor]
 type: blog
+permalink: /blog/:title/
 abstract: "Evaluating policy when you cannot run experiments is hard. This post surveys diff-in-diff, RDD, and synthetic control methods with code examples."
 ---
 

@@ -4,6 +4,7 @@ title: "Understanding the Gini Coefficient"
 date: 2026-04-21
 categories: [economics, statistics, public-policy]
 type: blog
+permalink: /blog/:title/
 abstract: "The Gini coefficient is the most widely used measure of income inequality. This post explains how it is constructed and what it does and does not tell you."
 ---
 

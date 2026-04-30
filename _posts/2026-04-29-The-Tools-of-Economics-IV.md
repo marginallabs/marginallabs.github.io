@@ -4,6 +4,7 @@ title: "The Tools of Economics: Instrumental Variables"
 date: 2026-04-29
 categories: [economics, econometrics, methodology]
 type: blog
+permalink: /blog/:title/
 series: "The Tools of Economics"
 series_url: /series/the-tools-of-economics/
 abstract: "When regression fails due to endogeneity, instrumental variables can rescue causal inference — if you can find a valid instrument."

@@ -4,6 +4,7 @@ title: "The Sunk Cost Fallacy: Throwing Good Money After Bad"
 date: 2026-04-13
 categories: [economics, fallacy, philosophy]
 type: blog
+permalink: /blog/:title/
 abstract: "Sunk costs should not affect decisions, but they do. Understanding why helps you make better choices."
 ---
 
