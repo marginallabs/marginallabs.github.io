@@ -34,11 +34,11 @@ Expect a mix of content across three broad areas:
 A few things worth knowing as a reader:
 
 - **Dark mode** — Toggle between light and dark themes with the navigation bar
-- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax.[^1] Filter by category, sort by date or reading time.
+- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax. Filter by category, sort by date or reading time.
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
 
-[^1]: Multiple words = AND search (e.g., `sunk cost`). Exact Match (`"word or phrase"`): Forces results to include that exact term. Exclude (`-word`): Removes results containing a specific word. [Learn More](https://support.google.com/websearch/answer/2466433)
+<p class="inline-footnote">Google-style query syntax: multiple words = AND search (e.g., <code>sunk cost</code>). Exact Match (<code>"word or phrase"</code>): Forces results to include that exact term. Exclude (<code>-word</code>): Removes results containing a specific word. <a href="https://support.google.com/websearch/answer/2466433">Learn More</a></p>
 
 
 # What Is Next

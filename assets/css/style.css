@@ -390,6 +390,12 @@ details[open] > .section-toggle .toggle-chevron {
   font-size: 0.82rem;
   color: var(--color-text-light);
 }
+.post-content .inline-footnote {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin: 0.6em 0 0 0;
+  line-height: 1.5;
+}
 .rss-readers-table .info-trigger {
   display: inline-flex;
   align-items: center;
