@@ -38,7 +38,7 @@ A few things worth knowing as a reader:
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
 
-<p class="inline-footnote">Google-style query syntax: multiple words = AND search (e.g., <code>sunk cost</code>). Exact Match (<code>"word or phrase"</code>): Forces results to include that exact term. Exclude (<code>-word</code>): Removes results containing a specific word. <a href="https://support.google.com/websearch/answer/2466433">Learn More</a></p>
+<p class="inline-footnote"><sup>1</sup> Multiple words = AND search (e.g., <code>sunk cost</code>). Exact Match (<code>"word or phrase"</code>): Forces results to include that exact term. Exclude (<code>-word</code>): Removes results containing a specific word. <a href="https://support.google.com/websearch/answer/2466433">Learn More</a></p>
 
 
 # What Is Next
