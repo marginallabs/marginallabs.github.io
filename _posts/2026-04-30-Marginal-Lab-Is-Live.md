@@ -8,7 +8,7 @@ permalink: /news/:title/
 abstract: "Marginal Lab has officially launched — a blog about economic thinking, econometrics, and the logic behind everyday decisions."
 ---
 
-<blockquote style="text-align: center; font-style: italic;">
+<blockquote style="font-style: italic; text-align: left; margin-left: auto; margin-right: auto; width: fit-content;">
 
 Roses are red.<br>
 Violets are blue.<br>
