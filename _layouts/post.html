@@ -87,7 +87,10 @@ layout: default
   </script>
   {% assign share_text = page.title | append: ' | Marginal Lab' | url_encode %}
   <div class="share-bar">
-    <span class="share-label">Share</span>
+    <a class="share-btn subscribe-btn" href="{{ '/subscribe/' | relative_url }}" aria-label="Subscribe">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    </a>
+    <span class="share-label">Share via:</span>
     <button class="share-btn copy-link" aria-label="Copy link">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span class="copy-tooltip">Copied!</span>
