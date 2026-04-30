@@ -34,7 +34,7 @@ Expect a mix of content across three broad areas:
 A few things worth knowing as a reader:
 
 - **Dark mode** — Toggle between light and dark themes with the navigation bar
-- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax. Filter by category, sort by date or reading time.
+- **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax.<sup>1</sup> Filter by category, sort by date or reading time.
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
 
