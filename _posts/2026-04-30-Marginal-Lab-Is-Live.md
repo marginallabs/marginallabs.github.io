@@ -8,10 +8,14 @@ permalink: /news/:title/
 abstract: "Marginal Lab has officially launched — a blog about economic thinking, econometrics, and the logic behind everyday decisions."
 ---
 
-*Roses are red.*
-*Violets are blue.*
-*Say hello to Marginal Lab —*
-*where ideas accrue.*
+<blockquote style="text-align: center; font-style: italic;">
+
+Roses are red.<br>
+Violets are blue.<br>
+Say hello to Marginal Lab —<br>
+where ideas accrue.
+
+</blockquote>
 
 Marginal Lab is now live. This is a blog about economic thinking — not just what economists study, but *how* they reason.
 
