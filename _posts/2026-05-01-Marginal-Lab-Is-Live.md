@@ -29,8 +29,11 @@ A few things worth knowing as a reader:
 - **Search and filter** — Instant, real-time search across all posts with Google-style query syntax.<sup>1</sup> Filter by category, sort by date or reading time.
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
+- **Comments** — Leave a comment on any post using your GitHub account, powered by [Giscus](https://giscus.app)<sup>2</sup>
 
 <p class="inline-footnote"><sup>1</sup> Multiple words = AND search (e.g., <code>sunk cost</code>). Exact Match (<code>"word or phrase"</code>): Forces results to include that exact term. Exclude (<code>-word</code>): Removes results containing a specific word. <a href="https://support.google.com/websearch/answer/2466433">Learn More</a></p>
+
+<p class="inline-footnote"><sup>2</sup> A GitHub account is required to comment.</p>
 
 
 # What Is Next
