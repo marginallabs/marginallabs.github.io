@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Regression Discontinuity: Causal Inference at the Cutoff"
+description: "Regression Discontinuity: Causal Inference at the Cutoff"
 date: 2026-04-23
 categories: [econometrics, research, methodology, statistics, public-policy]
 type: blog

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Fallacy of Exhaustive Effort 2: Why Leaving No Stone Unturned Can Bury You"
+description: "The Fallacy of Exhaustive Effort 2: Why Leaving No Stone Unturned Can Bury You"
 date: 2026-04-30
 categories: [economics, microeconomics]
 type: blog

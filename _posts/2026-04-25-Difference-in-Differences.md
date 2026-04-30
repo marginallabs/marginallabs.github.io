@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Difference-in-Differences: Before and After, Treatment and Control"
+description: "Difference-in-Differences: Before and After, Treatment and Control"
 date: 2026-04-25
 categories: [econometrics, research, methodology, public-policy, stata, r]
 type: blog

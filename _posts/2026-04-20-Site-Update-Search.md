@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "New Search and Filter Features"
+description: "New Search and Filter Features"
 date: 2026-04-20
 categories: [update]
 type: news

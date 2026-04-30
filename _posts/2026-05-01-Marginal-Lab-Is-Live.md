@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Marginal Lab Is Live"
+description: "Marginal Lab Is Live"
 date: 2026-05-01
 categories: [launch, features]
 type: news

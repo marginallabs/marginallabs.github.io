@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "News Section Launched"
-description: "News Section Launched"
 date: 2026-04-28
 categories: [update, general]
 type: news

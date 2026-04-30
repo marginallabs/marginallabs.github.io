@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Running Your First Regression in Stata"
+description: "Running Your First Regression in Stata"
 date: 2026-04-05
 categories: [stata, econometrics, statistics]
 type: blog

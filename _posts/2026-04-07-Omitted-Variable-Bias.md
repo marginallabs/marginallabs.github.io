@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Omitted Variable Bias: The Silent Killer of Your Estimates"
+description: "Omitted Variable Bias: The Silent Killer of Your Estimates"
 date: 2026-04-07
 categories: [economics, econometrics, research, methodology]
 type: blog

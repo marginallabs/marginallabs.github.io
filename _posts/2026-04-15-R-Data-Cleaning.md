@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Data Cleaning in R: The 80% Problem"
+description: "Data Cleaning in R: The 80% Problem"
 date: 2026-04-15
 categories: [r, general, statistics]
 type: blog

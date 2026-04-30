@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Tools of Economics: Instrumental Variables"
+description: "The Tools of Economics: Instrumental Variables"
 date: 2026-04-29
 categories: [economics, econometrics, methodology]
 type: blog

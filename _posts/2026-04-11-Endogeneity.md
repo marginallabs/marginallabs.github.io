@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Endogeneity and Instrumental Variables"
+description: "Endogeneity and Instrumental Variables"
 date: 2026-04-11
 categories: [economics, econometrics, research, fallacy, methodology]
 type: blog

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quick Histograms in R with ggplot2"
+description: "Quick Histograms in R with ggplot2"
 date: 2026-04-03
 categories: [r, econometrics, statistics]
 type: blog
