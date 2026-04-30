@@ -181,7 +181,7 @@
       targets.push(el);
     });
     targets.forEach(function(el) {
-          if (el.matches('h1, h2, h3, .page-title-row, .section-title-row, .lab-icon, .lab-title, .home-hero')) return;
+          if (el.matches('h1, h2, h3, .page-title-row, .section-title-row, .lab-icon, .lab-title, .lab-tagline, .lab-description, .home-hero')) return;
           el.classList.add('fade-in');
         });
     if ('IntersectionObserver' in window) {
