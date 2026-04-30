@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The Fallacy of Exhaustive Effort: Why Leaving No Stone Unturned Can Bury You"
+title: "The Fallacy of Exhaustive Effort 2: Why Leaving No Stone Unturned Can Bury You"
 date: 2026-04-30
-categories: [economics]
+categories: 
 abstract: "If satisfying all conditions for an optimal outcome is good, then satisfying as many as possible must be second best. This reasoning is false. When a constraint prevents one condition from being met, the remaining conditions are no longer individually desirable. Satisfying them can worsen the outcome. Drawing on the theory of the second best, we show that you should approach the problem in a different way."
 series: 
 pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort.pdf
@@ -122,25 +122,51 @@ The key insight is that *piecemeal welfare policy*, attempting to move "closer" 
 ## Proof via Lagrange Multipliers
 
 Let the objective function be $F(x_1, x_2, \ldots, x_n)$ subject to the optimality conditions
-$$g_k(x_1, x_2, \ldots, x_n) = 0, \quad k = 1, 2, \ldots, n.$$
+
+$$
+g_k(x_1, x_2, \ldots, x_n) = 0, \quad k = 1, 2, \ldots, n.
+$$
 
 **First-best.** At the unconstrained optimum, all $n$ conditions hold. The Lagrangian is
-$$\mathcal{L} = F(x_1, \ldots, x_n) + \sum_{k=1}^{n} \lambda_k \, g_k(x_1, \ldots, x_n),$$
+
+$$
+\mathcal{L} = F(x_1, \ldots, x_n) + \sum_{k=1}^{n} \lambda_k \, g_k(x_1, \ldots, x_n),
+$$
+
 and the first-order conditions are
-$$\frac{\partial F}{\partial x_i} + \sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_i} = 0, \quad i = 1, 2, \ldots, n. \tag{1}$$
+
+$$
+\frac{\partial F}{\partial x_i} + \sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_i} = 0, \quad i = 1, 2, \ldots, n. \tag{1}
+$$
+
 This is a system of $n$ equations in $n$ unknowns $(x_1, \ldots, x_n)$ with $n$ multipliers $(\lambda_1, \ldots, \lambda_n)$. Denote the first-best solution by $(\bar{x}_1, \ldots, \bar{x}_n)$ with multipliers $(\bar{\lambda}_1, \ldots, \bar{\lambda}_n)$.
 
 **Second-best.** Now suppose a constraint forces the system to violate condition $i$: $g_i(x_1, \ldots, x_n) = c \neq 0$. The remaining $n - 1$ conditions $g_k = 0$ for $k \neq i$ are still available. The new Lagrangian is
-$$\mathcal{L}' = F(x_1, \ldots, x_n) + \mu_i\,(g_i - c) + \sum_{k \neq i} \mu_k \, g_k(x_1, \ldots, x_n),$$
+
+$$
+\mathcal{L}' = F(x_1, \ldots, x_n) + \mu_i\,(g_i - c) + \sum_{k \neq i} \mu_k \, g_k(x_1, \ldots, x_n),
+$$
+
 where the constraint $g_i = c$ is now explicit. The new first-order conditions are
-$$\frac{\partial F}{\partial x_j} + \mu_i \frac{\partial g_i}{\partial x_j} + \sum_{k \neq i} \mu_k \frac{\partial g_k}{\partial x_j} = 0, \quad j = 1, 2, \ldots, n. \tag{2}$$
+
+$$
+\frac{\partial F}{\partial x_j} + \mu_i \frac{\partial g_i}{\partial x_j} + \sum_{k \neq i} \mu_k \frac{\partial g_k}{\partial x_j} = 0, \quad j = 1, 2, \ldots, n. \tag{2}
+$$
 
 **Step 1: The multipliers change.** Compare (1) and (2). They share the same left-hand side $\partial F / \partial x_j$, so
-$$\sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_j} = \mu_i \frac{\partial g_i}{\partial x_j} + \sum_{k \neq i} \mu_k \frac{\partial g_k}{\partial x_j}, \quad j = 1, \ldots, n.$$
+
+$$
+\sum_{k=1}^{n} \lambda_k \frac{\partial g_k}{\partial x_j} = \mu_i \frac{\partial g_i}{\partial x_j} + \sum_{k \neq i} \mu_k \frac{\partial g_k}{\partial x_j}, \quad j = 1, \ldots, n.
+$$
+
 This is a system of $n$ linear equations in the multipliers. The first-best multipliers $(\bar{\lambda}_1, \ldots, \bar{\lambda}_n)$ satisfy the version evaluated at $(\bar{x}_1, \ldots, \bar{x}_n)$. But the second-best solution $(x_1^{\ast}, \ldots, x_n^{\ast})$ must satisfy the constraint $g_i = c$, so in general $x^{\ast} \neq \bar{x}$. Since the partial derivatives $\partial g_k / \partial x_j$ are evaluated at a different point and the constraint $g_i = c$ imposes a different feasible set, the system for the $\mu_k$ is different from the system for the $\lambda_k$. Therefore $\mu_k \neq \bar{\lambda}_k$ in general.
 
 **Step 2: The optimal values of $x$ change.** For any $j$, the second-best condition (2) gives
-$$\frac{\partial F}{\partial x_j} = -\sum_{k=1}^{n} \mu_k \frac{\partial g_k}{\partial x_j},$$
+
+$$
+\frac{\partial F}{\partial x_j} = -\sum_{k=1}^{n} \mu_k \frac{\partial g_k}{\partial x_j},
+$$
+
 which depends on *every* $\mu_k$, including $\mu_i$. Since $\mu_i \neq \bar{\lambda}_i$, the right-hand side differs from the first-best condition for every $j$, not just $j = i$. Therefore every optimal $x_j^{\ast}$ generally differs from $\bar{x}_j$.
 
 **Step 3: The remaining conditions are violated.** This is the crucial step. The theorem does not merely claim that the multipliers and optimal values change. It claims that at the second-best optimum, the remaining optimality conditions $g_k(x^{\ast}) = 0$ for $k \neq i$ are *themselves violated*.
