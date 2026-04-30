@@ -299,9 +299,13 @@
     }
   };
 
-  // Track clicked post links
+  // Track clicked post links & mark visited
+  var visitedPosts = MarginalLab.getClickedPosts();
   document.querySelectorAll('a[href]').forEach(function(a) {
     if (a.classList.contains('post-title-link') || a.closest('.post-title-row')) {
+      if (visitedPosts.indexOf(a.getAttribute('href')) !== -1) {
+        a.classList.add('post-visited');
+      }
       a.addEventListener('click', function() {
         MarginalLab.addClickedPost(a.getAttribute('href'));
       });

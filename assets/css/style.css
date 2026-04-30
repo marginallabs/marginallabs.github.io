@@ -644,6 +644,9 @@ mark.search-highlight {
   font-size: 1.05rem;
   color: var(--color-accent);
 }
+.post-title-link.post-visited {
+  color: #8fa87a;
+}
 .post-excerpt {
   font-family: var(--font-body);
   font-size: 0.9rem;
