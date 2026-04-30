@@ -5,3 +5,5 @@ _site/
 *.gem
 Gemfile.lock
 guide.md
+*.py
+template.md
