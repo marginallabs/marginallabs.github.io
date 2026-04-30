@@ -241,6 +241,26 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   font-style: italic;
   margin: 0 0 0.8em;
 }
+.tagline-highlight {
+  background: linear-gradient(90deg, rgba(45,80,22,0.15) 0%, rgba(45,80,22,0.15) 100%) no-repeat left;
+  background-size: 0% 100%;
+  animation: highlight-sweep 1.2s ease forwards 0.3s;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+[data-theme="dark"] .tagline-highlight {
+  background: linear-gradient(90deg, rgba(143,168,122,0.2) 0%, rgba(143,168,122,0.2) 100%) no-repeat left;
+  background-size: 0% 100%;
+}
+@keyframes highlight-sweep {
+  from { background-size: 0% 100%; }
+  to { background-size: 100% 100%; }
+}
+.tagline-author {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-style: normal;
+}
 .lab-description {
   font-size: 1rem;
   color: var(--color-text-light);
