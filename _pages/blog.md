@@ -241,6 +241,10 @@ subscribe: true
     if (currentPage > 1) params.set('page', currentPage);
     var newUrl = params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname;
     history.replaceState(null, '', newUrl);
+
+    // Persist sort/per-page in localStorage
+    localStorage.setItem('blog_sort', sortSelect.value);
+    localStorage.setItem('blog_per_page', perPageSelect.value);
   }
 
   input.addEventListener('input', function() { currentPage = 1; search(); });
@@ -268,7 +272,7 @@ subscribe: true
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Restore from URL
+  // Restore from URL (takes priority) then localStorage
   var params = new URLSearchParams(window.location.search);
   if (params.get('q')) input.value = params.get('q');
   if (params.get('cats')) {
@@ -278,7 +282,9 @@ subscribe: true
     });
   }
   if (params.get('sort')) sortSelect.value = params.get('sort');
+  else if (localStorage.getItem('blog_sort')) sortSelect.value = localStorage.getItem('blog_sort');
   if (params.get('per_page')) perPageSelect.value = params.get('per_page');
+  else if (localStorage.getItem('blog_per_page')) perPageSelect.value = localStorage.getItem('blog_per_page');
   if (params.get('page')) currentPage = parseInt(params.get('page'));
   search();
 })();

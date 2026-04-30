@@ -275,6 +275,39 @@
     t.parentNode.insertBefore(wrap, t);
     wrap.appendChild(t);
   });
+
+  // Cookie utility
+  window.MarginalLab = {
+    setCookie: function(name, value, days) {
+      var d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+    },
+    getCookie: function(name) {
+      var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? decodeURIComponent(match[2]) : null;
+    },
+    addClickedPost: function(url) {
+      var history = this.getCookie('clicked_posts');
+      var posts = history ? history.split(',').filter(function(u) { return u !== url; }) : [];
+      posts.unshift(url);
+      if (posts.length > 50) posts = posts.slice(0, 50);
+      this.setCookie('clicked_posts', posts.join(','), 365);
+    },
+    getClickedPosts: function() {
+      var history = this.getCookie('clicked_posts');
+      return history ? history.split(',') : [];
+    }
+  };
+
+  // Track clicked post links
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    if (a.classList.contains('post-title-link') || a.closest('.post-title-row')) {
+      a.addEventListener('click', function() {
+        MarginalLab.addClickedPost(a.getAttribute('href'));
+      });
+    }
+  });
   </script>
 </body>
 </html>
