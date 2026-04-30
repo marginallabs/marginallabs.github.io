@@ -259,7 +259,9 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .tagline-author {
   font-size: 0.85rem;
   color: var(--color-text-light);
-  font-style: normal;
+  font-style: italic;
+  display: inline-block;
+  margin-left: 2em;
 }
 .lab-description {
   font-size: 1rem;
