@@ -70,7 +70,7 @@ layout: default
     var delay = parseInt(line.getAttribute('data-delay')) || 1700;
     var chars = line.querySelectorAll('.desc-char');
     chars.forEach(function(ch, i) {
-      setTimeout(function() { ch.classList.add('visible'); }, delay + i * 5);
+      setTimeout(function() { ch.classList.add('visible'); }, delay + i * 30);
     });
   });
 })();
