@@ -244,7 +244,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .tagline-highlight {
   background: linear-gradient(90deg, #00ff36 0%, #00ff36 100%) no-repeat left;
   background-size: 0% 100%;
-  animation: highlight-sweep 1.2s ease forwards 0.5s;
+  animation: highlight-sweep 1.2s ease forwards 0.4s;
   padding: 0 0.15em;
   border-radius: 2px;
 }
