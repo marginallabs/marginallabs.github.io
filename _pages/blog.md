@@ -228,7 +228,7 @@ subscribe: true
     else { resultCount.style.display = 'none'; }
 
     noResults.style.display = (totalFound === 0 && (hasQuery || activeCategories.length > 0)) ? '' : 'none';
-    clear.style.display = q ? '' : 'none';
+    clear.style.display = q ? 'block' : 'none';
 
     renderPagination(totalFound);
 
