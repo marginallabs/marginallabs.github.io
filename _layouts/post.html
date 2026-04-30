@@ -111,7 +111,7 @@ layout: default
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 0 0-.64.05l-2.39 1.19a.96.96 0 0 1-1.38-.86l-.06-2.02a.97.97 0 0 0-.32-.68A11.39 11.389 0 0 1 .002 11.64zm8.32-2.19-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 0 0-2.61.48z"/></svg>
     </a>
   </div>
-  {% if page.categories.size > 0 %}
+  {% if page.type == 'blog' and page.categories.size > 0 %}
   <div class="related-posts">
     <div class="related-posts-title">Related Posts</div>
     <ul class="related-posts-list">
@@ -149,13 +149,31 @@ layout: default
   <footer class="post-footer">
     <hr>
     <p class="post-nav">
-      {% if page.previous %}
-        <a class="post-nav-prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+      {% assign same_type = site.posts | where: "type", page.type | sort: "date" %}
+      {% assign prev_post = nil %}
+      {% assign next_post = nil %}
+      {% for post in same_type %}
+        {% if post.url == page.url %}
+          {% if forloop.last == false %}
+            {% assign next_index = forloop.index0 | plus: 1 %}
+          {% endif %}
+          {% break %}
+        {% endif %}
+        {% assign prev_post = post %}
+      {% endfor %}
+      {% for post in same_type %}
+        {% if forloop.index0 == next_index %}
+          {% assign next_post = post %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if prev_post %}
+        <a class="post-nav-prev" href="{{ prev_post.url | relative_url }}">&larr; {{ prev_post.title }}</a>
       {% else %}
         <span class="post-nav-prev"></span>
       {% endif %}
-      {% if page.next %}
-        <a class="post-nav-next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+      {% if next_post %}
+        <a class="post-nav-next" href="{{ next_post.url | relative_url }}">{{ next_post.title }} &rarr;</a>
       {% else %}
         <span class="post-nav-next"></span>
       {% endif %}
