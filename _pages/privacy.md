@@ -20,6 +20,6 @@ All data listed above is stored locally in your browser and is never transmitted
 
 ## Comments
 
-The comment section on each post is powered by [Giscus](https://giscus.app){:target="_blank" rel="noopener"}, which uses GitHub Discussions as its backend. To leave a comment, you must sign in with a GitHub account. When you sign in, GitHub may collect personal information (such as your username and email) in accordance with [GitHub's Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement){:target="_blank" rel="noopener"}. Marginal Lab does not collect, store, or have access to your GitHub account information.
+The comment section on each post is powered by [Giscus](https://giscus.app){:target="_blank" rel="noopener"}, which uses GitHub Discussions as its backend. To leave a comment, you must sign in with a GitHub account. When you sign in, GitHub may collect personal information (such as your username and email) in accordance with [GitHub's Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement){:target="_blank" rel="noopener"}. Marginal Lab does not collect or store your GitHub account information beyond what is publicly visible in the discussion thread (such as your username and comment content).
 
 Comments you post are stored on GitHub's servers as part of the repository's Discussions. Marginal Lab reserves the right to delete or hide comments that are off-topic, spam, or abusive.
