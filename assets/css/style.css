@@ -250,7 +250,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 
 /* --- Recent Posts --- */
 .recent-posts {
-  padding: 1rem 0 3rem;
+  padding: 1rem 0 1rem;
 }
 .recent-posts h2 {
   margin-bottom: 0.5em;
