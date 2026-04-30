@@ -37,6 +37,7 @@ A few things worth knowing as a reader:
 - **Search and filter** — Every post on the blog and news pages is searchable by keyword with Google-style query syntax.[^1] Filter by category, sort by date or reading time.
 - **Reading progress and estimated time** — Each post shows how long it takes to read, and a progress bar tracks your scroll position
 - **Subscribe via RSS** — Head to the [Subscribe](/subscribe/) page for a quick RSS setup guide with popular readers
+
 [^1]: Multiple words = AND search (e.g., `sunk cost`). Exact Match (`"word or phrase"`): Forces results to include that exact term. Exclude (`-word`): Removes results containing a specific word. [Learn More](https://support.google.com/websearch/answer/2466433)
 
 
