@@ -31,6 +31,7 @@ The answer is **no**. The concept is simple: the optimal strategy depends on you
 ## The Dinner Party Metaphor
 
 Imagine you go to a Michelin-starred restaurant. You want to see three things:
+
 1.  Dim lighting.
 2.  A big plate with small food.
 3.  Nice food.
@@ -99,9 +100,11 @@ And that is why the fallacy is so hard to shake. When someone points out that a 
 Am I exaggerating? Not really. Even economists do this.
 
 The First Fundamental Theorem of Welfare Economics states that a competitive market equilibrium is Pareto-efficient (good outcome), when a specific set of conditions hold simultaneously, including:
+
 1.  No market powers
 2.  Complete market
 3.  No public goods
+
 But then something goes wrong in the translation. Some economists, especially those who support free market, look at this list and start to treat each condition as a separate policy goal. *Competition is good. Information is good. Complete markets are good.* You hear it in every policy seminar: "We should liberalise this market because competition is good." "We should disclose more information because transparency is good."
 
 Notice what has happened. The theorem says these conditions are *jointly* sufficient for efficiency. The economists hear: each condition is *individually* good. The theorem says they work *together* or not at all. They prescribes them *one by one*. This is exactly the "leave no stone unturned" fallacy. The reasoning goes: since satisfying all conditions produces the first-best outcome, satisfying as many as possible must be second best. It sounds reasonable. It is false.
