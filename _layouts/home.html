@@ -7,8 +7,8 @@ layout: default
     <h1 class="lab-title">Marginal Lab</h1>
     <p class="lab-tagline">Rational People <span class="tagline-highlight">Think at the Margin</span><br><span class="tagline-author">— N. Gregory Mankiw</span></p>
     <p class="lab-description">
-      <span class="desc-line" data-delay="1500">A lab exploring economic ideas,</span><br>
-      <span class="desc-line" data-delay="3200">and what happens when they meet real life.</span>
+      <span class="desc-line" data-delay="1400">A lab exploring economic ideas,</span><br>
+      <span class="desc-line" data-delay="1600">and what happens when they meet real life.</span>
     </p>
   </div>
   <section class="recent-posts">
@@ -70,7 +70,7 @@ layout: default
     var delay = parseInt(line.getAttribute('data-delay')) || 1700;
     var chars = line.querySelectorAll('.desc-char');
     chars.forEach(function(ch, i) {
-      setTimeout(function() { ch.classList.add('visible'); }, delay + i * 55);
+      setTimeout(function() { ch.classList.add('visible'); }, delay + i * 5);
     });
   });
 })();
