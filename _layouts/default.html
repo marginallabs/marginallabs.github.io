@@ -291,8 +291,7 @@
       var history = this.getCookie('clicked_posts');
       var posts = history ? history.split(',').filter(function(u) { return u !== url; }) : [];
       posts.unshift(url);
-      if (posts.length > 50) posts = posts.slice(0, 50);
-      this.setCookie('clicked_posts', posts.join(','), 365);
+      this.setCookie('clicked_posts', posts.join(','), 36500);
     },
     getClickedPosts: function() {
       var history = this.getCookie('clicked_posts');
