@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/marginallab.png' | relative_url }}">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#2d5016">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
     "description": {{ page.description | default: site.description | jsonify }},
     {% if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif %}
     "author": {"@type": "Organization", "name": {{ site.title | jsonify }}},
-    "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}, "logo": {"@type": "ImageObject", "url": {{ '/assets/img/favicon.svg' | absolute_url | jsonify }}}},{% else %}"@type": "WebPage",
+    "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}, "logo": {"@type": "ImageObject", "url": {{ '/assets/img/marginallab.png' | absolute_url | jsonify }}}},{% else %}"@type": "WebPage",
     "name": {{ page.title | default: site.title | jsonify }},
     "description": {{ page.description | default: site.description | jsonify }},{% endif %}
     "url": {{ page.url | absolute_url | jsonify }},
@@ -88,7 +88,7 @@
   <!-- Desktop header -->
   <header class="site-header" id="desktop-header">
     <div class="wrapper">
-      <a class="site-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/favicon.svg' | relative_url }}" alt="∂">{{ site.title }}</a>
+      <a class="site-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/marginallab.png' | relative_url }}" alt="∂">{{ site.title }}</a>
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
@@ -108,7 +108,7 @@
   </button>
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
   <aside class="sidebar" id="sidebar">
-    <a class="sidebar-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/favicon.svg' | relative_url }}" alt="∂">{{ site.title }}</a>
+    <a class="sidebar-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/marginallab.png' | relative_url }}" alt="∂">{{ site.title }}</a>
     <nav class="sidebar-nav">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
@@ -129,7 +129,7 @@
 
   <main class="page-content">
     <div class="wrapper">
-      {% unless page.url == '/' %}<h2 class="mobile-page-title"><a href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/favicon.svg' | relative_url }}" alt="∂"> Marginal Lab</a></h2>{% endunless %}
+      {% unless page.url == '/' %}<h2 class="mobile-page-title"><a href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/img/marginallab.png' | relative_url }}" alt="∂"> Marginal Lab</a></h2>{% endunless %}
       {{ content }}
     </div>
   </main>

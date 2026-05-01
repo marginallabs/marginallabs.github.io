@@ -4,7 +4,7 @@ description: >-
   Marginal Lab — A lab exploring economic ideas, and what happens when they meet real life.
 baseurl: ""
 url: "https://marginallabs.github.io"
-logo: /assets/img/favicon.svg
+logo: /assets/img/marginallab.png
 author: Marginal Lab
 
 markdown: kramdown
