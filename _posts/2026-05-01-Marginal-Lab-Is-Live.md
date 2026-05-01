@@ -22,7 +22,7 @@ where ideas accrue.
 
 Whether you have never taken an economics class or just want to see familiar ideas in a new light, this blog is written for you. No prerequisites! Expect a mix of essays, tutorials, and the occasional deep dive into economic theory. See more at [About](/about/).
 
-# Site Features
+## Site Features
 
 A few things worth knowing as a reader:
 
@@ -38,6 +38,6 @@ A few things worth knowing as a reader:
 <p class="inline-footnote"><sup>2</sup> A GitHub account is required to comment.</p>
 
 
-# What Is Next
+## What Is Next
 
 Check our first post [here](/blog/The-Fallacy-of-Exhaustive-Effort/)! More posts are on the way... If you have a topic you would like to see covered, feel free to reach out at [marginallab@proton.me](mailto:marginallab@proton.me).

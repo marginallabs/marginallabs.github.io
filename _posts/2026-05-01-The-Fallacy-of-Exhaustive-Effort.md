@@ -12,13 +12,13 @@ pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort.pdf
 image: /assets/img/thumbnails/The-Fallacy-of-Exhaustive-Effort-thumb.png
 ---
 
-# The Prevailing Intuition
+## The Prevailing Intuition
 
 We always believe we should *leave no stone unturned* when we pursue our goals. That is, we should do as much as possible to close the gap between the current state and the target. When successful people give lectures, they talk about their "good" habits, like sleeping early, waking up early, reading books, and so on. We often treat those people as "landmarks" and those habits as *criteria for success*. Therefore, we are sold on the idea that we should follow them as much as we can to get close to success. *More effort equals better outcome.*
 
 However, this argument is generally **not true**. In other words, it is not always preferable to do as much as we can.
 
-# The Formal Problem
+## The Formal Problem
 
 Formally, suppose there are $n$ conditions, $c_1, c_2, \dots, c_n$. Satisfying all of them would lead to a favourable outcome $X$. Now, given that at least one of the conditions $c_k$ cannot be satisfied, should we try our best to satisfy all other conditions? Does this strategy bring us closer to the favourable outcome?
 
@@ -81,7 +81,7 @@ The pattern is the same every time. The "leave no stone unturned" logic says: sa
 | Taxes & Public Goods | Low taxes; fund public goods | Lump-sum tax is impossible | Fund only public goods whose benefit exceeds the distortion |
 | Flat Sales Tax | Uniform rate on all goods | Leisure cannot be taxed | Differentiate rates |
 
-# The Fallacy of Misplaced Valuation
+## The Fallacy of Misplaced Valuation
 
 You may say I am being consequentialist, and maybe that is right. We should always judge the **outcome**, not the individual conditions.
 
@@ -111,11 +111,11 @@ Notice what has happened. The theorem says these conditions are *jointly* suffic
 
 Governments actually follow this advice. They liberalise trade while ignoring the environmental externality, because "free trade is good." They deregulate financial markets while assuming away imperfect information, because "free markets are good." They privatise public services while pretending the technology is convex, because "competition is good." Each time, they are ticking off conditions from the list.
 
-# Conclusion
+## Conclusion
 
 The right strategy depends on your constraints. No constraints? Satisfy every condition and enjoy the outcome. But constraints are usually binding, and when they are, you cannot just copy the condition list and hope for the best. The optimal solution is **completely different**. Sometimes, the stone you leave unturned is the one that was going to bury you.
 
-# Appendix
+## Appendix
 
 ## The Theory of the Second Best
 
@@ -181,6 +181,6 @@ Suppose for contradiction that some condition $g_m(x^{\ast}) = 0$ for $m \neq i$
 
 Therefore, when one optimality condition cannot be satisfied, the second-best solution generally requires violating **all** remaining conditions as well.
 
-# References
+## References
 
  Lipsey, R. G., & Lancaster, K. (1956). The general theory of second best. *The Review of Economic Studies*, *24*(1), 11--32. <https://doi.org/10.2307/2296233>
