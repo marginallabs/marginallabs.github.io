@@ -64,6 +64,9 @@ layout: default
   {{ content }}
   </div>
   <script>
+  document.querySelectorAll('.post-content img').forEach(function(img) { img.loading = 'lazy'; });
+  </script>
+  <script>
   (function() {
     var content = document.querySelector('.post-content');
     if (!content) return;
