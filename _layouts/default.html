@@ -33,7 +33,12 @@
     "mainEntityOfPage": {{ page.url | absolute_url | jsonify }}
   }
   </script>
+  {% if page.custom_title %}
+  <title>{{ page.custom_title }}</title>
+  {% seo title=false %}
+  {% else %}
   {% seo %}
+  {% endif %}
   {% feed_meta %}
   <script>
   MathJax = {
