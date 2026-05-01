@@ -28,7 +28,7 @@ Formally, suppose there are $n$ conditions, $c_1, c_2, \dots, c_n$. Satisfying a
 
 The answer is **no**. The concept is simple: the optimal strategy depends on your constraints. If you have no constraints, you can satisfy all $n$ conditions and get a favourable outcome. If you add some constraints to the problem, the objective does not change, but *all* of your optimal conditions are altered because they are often correlated. The optimal solution structure is **completely different** from the unconstrained problem.
 
-## The Dinner Party Metaphor
+### The Dinner Party Metaphor
 
 Imagine you go to a Michelin-starred restaurant. You want to see three things:
 
@@ -42,7 +42,7 @@ But what is the result? You have **made it worse**. The dim lighting looks like 
 
 Of course, this is merely a metaphor to build intuition. Let us now examine some real examples in economics.
 
-## Monopoly and Pollution
+### Monopoly and Pollution
 
 Imagine a society with a monopoly firm that pollutes the river. First, we often say *monopoly is bad*. It is because a monopoly would produce less output than a competitive market and hence set a price higher than that of a competitive market. It inflicts a loss on the consumers. Second, we often say *pollution is bad*. It is because the firm does not need to pay for the social cost of the pollution, and hence produces more than the optimal amount. It inflicts a loss on society.
 
@@ -54,7 +54,7 @@ The best policy to handle the problem is, of course, to break up the monopoly an
 
 Breaking up the monopoly increases its production scale and lowers the price, but it means higher pollution. Taxing the pollution means we lower its scale, and hence the price will be even higher. As you may see, the "bad" side of monopoly and the "bad" side of pollution **offset each other naturally**. The optimal policy could be **"do nothing."**
 
-## Taxes and Public Goods
+### Taxes and Public Goods
 
 Imagine a society with two "good" conditions: *low taxes are good* (they let people keep what they earn and encourage work), and *public goods are good* (roads, courts, you need them). The first-best world satisfies both: the government funds public goods with a lump-sum tax that does not distort anyone's incentives. Everyone works and everyone pays.
 
@@ -62,7 +62,7 @@ Now suppose a lump-sum tax is not possible. The government can only raise revenu
 
 But this is not optimal. Every additional dollar of income tax discourages work further. At some point, the deadweight loss from taxation outweighs the benefit of the public good it funds. The "good" of public goods and the "good" of low taxes **pull against each other**. The optimal policy is to fund only those whose benefit exceeds the distortion they cause. Some "good" things must be left unfunded, because paying for them makes the overall outcome worse.
 
-## Flat Taxation and the Leisure Constraint
+### Flat Taxation and the Leisure Constraint
 
 You might say: fine, income taxes distort. So let us switch to a *flat general sales tax*. One rate on everything, no exceptions. It sounds simple and it sounds fair. In a world where we could tax **all** goods, it would be optimal.
 
@@ -70,7 +70,7 @@ But here is the catch. A flat sales tax is only optimal if you can tax *all* goo
 
 This matters because a flat sales tax makes the choice between consumption and leisure more distorted for some people than others. People who can easily substitute toward home production face a lighter burden than those who cannot. The second-best optimal commodity tax is **not** flat. It charges lower rates on goods that compete closely with leisure, precisely because you cannot tax leisure. The "good" condition of a uniform rate must be **violated** to account for the constraint you cannot remove.
 
-## Summary
+### Summary
 
 The pattern is the same every time. The "leave no stone unturned" logic says: satisfy every good condition you can. But when a constraint binds, satisfying the remaining conditions can make things worse. The table below makes this explicit.
 
@@ -117,7 +117,7 @@ The right strategy depends on your constraints. No constraints? Satisfy every co
 
 ## Appendix
 
-## The Theory of the Second Best
+### The Theory of the Second Best
 
 The theory of the second best, introduced by Lipsey and Lancaster (1956), addresses a fundamental question in welfare economics: if one of the conditions required for a *Pareto-optimal* allocation cannot be satisfied, what is the best attainable outcome? The intuitive answer, satisfying as many of the remaining conditions as possible, is **formally incorrect**.
 
@@ -125,7 +125,7 @@ Consider a general equilibrium system characterised by $n$ first-order condition
 
 The key insight is that *piecemeal welfare policy*, attempting to move "closer" to the first-best by satisfying individual conditions in isolation, **can reduce welfare relative to doing nothing at all**. The theory thus provides a formal justification for **holistic**, rather than incremental, policy design in second-best environments.
 
-## Proof via Lagrange Multipliers
+### Proof via Lagrange Multipliers
 
 Let the objective function be $F(x_1, x_2, \ldots, x_n)$ subject to the optimality conditions
 
