@@ -79,7 +79,7 @@ layout: default
     }
     if (line.classList.contains('tagline-author')) {
       line.setAttribute('data-delay', highlightEnd + 100);
-      var authDelay = highlightEnd + 100;
+      var authDelay = highlightEnd + 600;
       chars.forEach(function(ch, i) {
         setTimeout(function() { ch.classList.add('visible'); }, authDelay + i * 40);
       });
