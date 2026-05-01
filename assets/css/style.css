@@ -664,7 +664,16 @@ mark.search-highlight {
   margin-top: 3em;
 }
 .post-content h2 {
+  margin-top: 3em;
+  font-size: 1.8rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.post-content h3 {
   margin-top: 2em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.3em;
 }
 
 /* --- Blog List --- */
