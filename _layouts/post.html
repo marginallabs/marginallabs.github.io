@@ -54,7 +54,7 @@ layout: default
       <a class="pdf-download" href="{{ page.pdf | relative_url }}" target="_blank">Download PDF</a>
     {% endif %}
   </header>
-  {% if content contains '<h2' or content contains '<h3' %}
+  {% if page.type != 'news' and content contains '<h2' or content contains '<h3' %}
   <nav class="toc">
     <div class="toc-title">Contents</div>
     <ul id="toc-list"></ul>
