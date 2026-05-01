@@ -1234,7 +1234,7 @@ pre code { background: none; padding: 0; font-size: 0.9rem; border-radius: 0; }
   html { font-size: 15px; }
   .share-row { flex-wrap: wrap; }
   .share-row .share-label { width: 100%; margin-bottom: 0.3em; }
-  .share-row .share-btn { width: 22%; max-width: 38px; }
+  .share-row .share-btn { width: 22%; height: auto; aspect-ratio: 1; }
 }
 
 /* Hide Giscus branding */
