@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marginallabs.github.io/sitemap.xml
