@@ -37,7 +37,7 @@
     {% if layout == "post" %}"@type": "Article",
     "headline": {{ page.title | jsonify }},
     "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-    "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
     "description": {{ page.description | default: site.description | jsonify }},
     {% if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif %}
     "author": {"@type": "Organization", "name": {{ site.title | jsonify }}},
