@@ -67,6 +67,7 @@ layout: default
     }
   });
   document.querySelectorAll('.tagline-line').forEach(function(line) {
+    if (line.classList.contains('tagline-author')) return;
     var delay = parseInt(line.getAttribute('data-delay')) || 0;
     var chars = line.querySelectorAll('.tagline-char');
     chars.forEach(function(ch, i) {
