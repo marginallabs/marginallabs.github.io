@@ -16,6 +16,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+  <meta property="og:image" content="{{ '/assets/img/favicon.svg' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    {% if layout == "post" %}"@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+    "description": {{ page.description | default: site.description | jsonify }},
+    {% if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif %}
+    "author": {"@type": "Organization", "name": {{ site.title | jsonify }}},
+    "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}, "logo": {"@type": "ImageObject", "url": {{ '/assets/img/favicon.svg' | absolute_url | jsonify }}}},{% else %}"@type": "WebPage",
+    "name": {{ page.title | default: site.title | jsonify }},
+    "description": {{ page.description | default: site.description | jsonify }},{% endif %}
+    "url": {{ page.url | absolute_url | jsonify }},
+    "mainEntityOfPage": {{ page.url | absolute_url | jsonify }}
+  }
+  </script>
   {% seo %}
   {% feed_meta %}
   <script>
