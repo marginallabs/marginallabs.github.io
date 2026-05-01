@@ -245,14 +245,11 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   padding: 0 0.15em;
   border-radius: 2px;
 }
-.tagline-highlight .tagline-char {
-  background: transparent;
-  transition: background 0.3s 1s, opacity 0.05s;
-}
-.tagline-highlight .tagline-char.visible {
+.tagline-highlight.highlighted {
   background: #00ff36;
+  transition: background 0.4s ease;
 }
-[data-theme="dark"] .tagline-highlight .tagline-char.visible {
+[data-theme="dark"] .tagline-highlight.highlighted {
   background: #00ff36;
 }
 .tagline-char {

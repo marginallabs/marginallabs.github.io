@@ -71,6 +71,10 @@ layout: default
     chars.forEach(function(ch, i) {
       setTimeout(function() { ch.classList.add('visible'); }, delay + i * 40);
     });
+    if (line.classList.contains('tagline-highlight')) {
+      var lastCharTime = delay + chars.length * 40;
+      setTimeout(function() { line.classList.add('highlighted'); }, lastCharTime + 1000);
+    }
   });
 })();
 </script>
