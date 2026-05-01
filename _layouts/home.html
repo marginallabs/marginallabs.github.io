@@ -74,17 +74,17 @@ layout: default
       setTimeout(function() { ch.classList.add('visible'); }, delay + i * 40);
     });
     if (line.classList.contains('tagline-highlight')) {
-      var lastCharTime = delay + (chars.length - 1) * 40;
-      setTimeout(function() { line.classList.add('highlighted'); }, lastCharTime - 100);
-      highlightEnd = lastCharTime;
-    }
-    if (line.classList.contains('tagline-author')) {
-      line.setAttribute('data-delay', highlightEnd + 100);
-      var authDelay = highlightEnd + 600;
-      chars.forEach(function(ch, i) {
-        setTimeout(function() { ch.classList.add('visible'); }, authDelay + i * 40);
-      });
+      highlightEnd = delay + (chars.length - 1) * 40;
+      setTimeout(function() { line.classList.add('highlighted'); }, highlightEnd - 100);
     }
   });
+  var authorLine = document.querySelector('.tagline-author');
+  if (authorLine) {
+    var authChars = authorLine.querySelectorAll('.tagline-char');
+    var authDelay = highlightEnd + 1500;
+    authChars.forEach(function(ch, i) {
+      setTimeout(function() { ch.classList.add('visible'); }, authDelay + i * 40);
+    });
+  }
 })();
 </script>
