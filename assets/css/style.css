@@ -242,20 +242,25 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   margin: 0 0 0.8em;
 }
 .tagline-highlight {
+  position: relative;
   padding: 0 0.15em;
   border-radius: 2px;
-  background-image: linear-gradient(to right, #00ff36 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
 }
-.tagline-highlight.highlighted {
-  background-position: 0 0;
-  transition: background-position 0.5s ease;
+.tagline-highlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #00ff36;
+  border-radius: 2px;
+  z-index: -1;
+  clip-path: inset(0 100% 0 0);
 }
-[data-theme="dark"] .tagline-highlight {
-  background-image: linear-gradient(to right, #00ff36 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
+.tagline-highlight.highlighted::after {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.5s ease;
+}
+[data-theme="dark"] .tagline-highlight::after {
+  background: #00ff36;
 }
 .tagline-char {
   opacity: 0;
