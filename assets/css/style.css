@@ -244,18 +244,18 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 .tagline-highlight {
   padding: 0 0.15em;
   border-radius: 2px;
-  background: linear-gradient(to right, #00ff36 50%, transparent 50%) left;
+  background-image: linear-gradient(to right, #00ff36 50%, transparent 50%);
   background-size: 200% 100%;
-  background-position: right;
+  background-position: 100% 0;
 }
 .tagline-highlight.highlighted {
-  background-position: left;
+  background-position: 0 0;
   transition: background-position 0.5s ease;
 }
 [data-theme="dark"] .tagline-highlight {
-  background: linear-gradient(to right, #00ff36 50%, transparent 50%) left;
+  background-image: linear-gradient(to right, #00ff36 50%, transparent 50%);
   background-size: 200% 100%;
-  background-position: right;
+  background-position: 100% 0;
 }
 .tagline-char {
   opacity: 0;
