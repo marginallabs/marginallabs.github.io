@@ -822,6 +822,9 @@ mark.search-highlight {
   gap: 0.8em;
   margin-bottom: 0.5em;
 }
+.footer-contact a {
+  text-decoration: none;
+}
 .footer-text {
   font-family: var(--font-heading);
   font-size: 0.75rem;
