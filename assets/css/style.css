@@ -824,6 +824,7 @@ mark.search-highlight {
 }
 .footer-contact a {
   text-decoration: none;
+  border-bottom: none;
 }
 .footer-text {
   font-family: var(--font-heading);
