@@ -10,7 +10,7 @@ abstract: "If satisfying all conditions for an optimal outcome is good, then sat
 series: 
 series_url: 
 pdf: /assets/files/The-Fallacy-of-Exhaustive-Effort.pdf
-image: /assets/img/thumbnails/The-Fallacy-of-Exhaustive-Effort-thumb.png
+image: /assets/img/posts/2026-05-01/The-Fallacy-of-Exhaustive-Effort-thumb.png
 ---
 
 ## The Prevailing Intuition
