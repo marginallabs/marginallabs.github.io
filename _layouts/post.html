@@ -27,7 +27,7 @@ layout: default
     {% if page.categories %}
     <div class="post-tags">
       {% for cat in page.categories %}
-        <span class="category-tag">{{ cat }}</span>
+        <a class="category-tag" href="{{ page.type | default: 'blog' | prepend: '/' | append: '/' | relative_url }}?cats={{ cat | downcase | url_encode }}">{{ cat }}</a>
       {% endfor %}
     </div>
     {% endif %}

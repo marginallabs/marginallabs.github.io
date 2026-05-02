@@ -770,6 +770,13 @@ mark.search-highlight {
   border-radius: 3px;
   font-size: 0.8rem;
   margin-right: 0.35em;
+  border-bottom: none;
+  cursor: pointer;
+}
+.category-tag:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-bottom: none;
 }
 .post-footer { margin-top: 2em; }
 .post-abstract {
