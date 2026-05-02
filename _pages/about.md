@@ -18,4 +18,6 @@ Expect a mix of content across three broad areas:
 
 ## Contacts
 
-Email: [marginallab@proton.me](mailto:marginallab@proton.me)
+- Email: [marginallab@proton.me](mailto:marginallab@proton.me)
+- X: [@MarginalLabEcon](https://x.com/MarginalLabEcon){:target="_blank" rel="noopener"}
+- Facebook: [MarginalLab](https://www.facebook.com/MarginalLab){:target="_blank" rel="noopener"}
