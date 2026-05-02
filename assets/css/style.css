@@ -257,7 +257,7 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
 }
 .tagline-highlight.highlighted::after {
   clip-path: inset(0 0 0 0);
-  transition: clip-path 0.8s ease;
+  transition: clip-path 0.95s ease;
 }
 [data-theme="dark"] .tagline-highlight::after {
   background: #00ff36;
