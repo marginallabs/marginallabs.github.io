@@ -816,6 +816,12 @@ mark.search-highlight {
   text-align: center;
   background: var(--color-bg-alt);
 }
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
+  margin-bottom: 0.5em;
+}
 .footer-text {
   font-family: var(--font-heading);
   font-size: 0.75rem;
