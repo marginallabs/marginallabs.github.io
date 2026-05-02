@@ -269,6 +269,21 @@ subscribe: true
     });
   });
 
+  // Category tags in post previews toggle filter
+  list.addEventListener('click', function(e) {
+    var tag = e.target.closest('.post-category-badges .category-tag');
+    if (!tag || tag.classList.contains('category-more-toggle') || tag.classList.contains('hidden-tag')) return;
+    var cat = tag.textContent.trim().toLowerCase();
+    var idx = activeCategories.indexOf(cat);
+    if (idx === -1) { activeCategories.push(cat); } else { activeCategories.splice(idx, 1); }
+    allBtns.forEach(function(btn) {
+      if (activeCategories.indexOf(btn.getAttribute('data-category')) !== -1) btn.classList.add('active');
+      else btn.classList.remove('active');
+    });
+    currentPage = 1;
+    search();
+  });
+
   paginationEl.addEventListener('click', function(e) {
     var btn = e.target.closest('[data-page]');
     if (!btn) return;
