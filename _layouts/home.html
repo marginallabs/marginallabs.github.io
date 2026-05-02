@@ -81,7 +81,7 @@ layout: default
   var authorLine = document.querySelector('.tagline-author');
   if (authorLine) {
     var authChars = authorLine.querySelectorAll('.tagline-char');
-    var authDelay = highlightEnd + 200;
+    var authDelay = highlightEnd;
     authChars.forEach(function(ch, i) {
       setTimeout(function() { ch.classList.add('visible'); }, authDelay + i * 40);
     });
