@@ -782,38 +782,69 @@ mark.search-highlight {
 .format-badge {
   display: inline-block;
   padding: 0.15em 0.6em;
-  border-radius: 3px;
-  font-size: 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
   font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.03em;
   margin-right: 0.35em;
   border-bottom: none;
-  cursor: default;
   text-transform: capitalize;
   vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid;
 }
 .format-badge.format-essay {
-  background: #e8f5e9;
+  background: transparent;
   color: #2e7d32;
+  border-color: #2e7d32;
 }
 .format-badge.format-tutorial {
-  background: #e3f2fd;
+  background: transparent;
   color: #1565c0;
+  border-color: #1565c0;
 }
 .format-badge.format-deep-dive {
-  background: #f3e5f5;
+  background: transparent;
   color: #7b1fa2;
+  border-color: #7b1fa2;
+}
+.format-badge.format-essay:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+.format-badge.format-tutorial:hover {
+  background: #1565c0;
+  color: #fff;
+}
+.format-badge.format-deep-dive:hover {
+  background: #7b1fa2;
+  color: #fff;
 }
 [data-theme="dark"] .format-badge.format-essay {
-  background: #1b3a1e;
   color: #66bb6a;
+  border-color: #66bb6a;
 }
 [data-theme="dark"] .format-badge.format-tutorial {
-  background: #0d2744;
   color: #64b5f6;
+  border-color: #64b5f6;
 }
 [data-theme="dark"] .format-badge.format-deep-dive {
-  background: #2a1540;
   color: #ce93d8;
+  border-color: #ce93d8;
+}
+[data-theme="dark"] .format-badge.format-essay:hover {
+  background: #66bb6a;
+  color: #1a1a1a;
+}
+[data-theme="dark"] .format-badge.format-tutorial:hover {
+  background: #64b5f6;
+  color: #1a1a1a;
+}
+[data-theme="dark"] .format-badge.format-deep-dive:hover {
+  background: #ce93d8;
+  color: #1a1a1a;
 }
 .post-category-badges .format-badge {
   font-size: 0.7rem;

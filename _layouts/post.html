@@ -26,7 +26,7 @@ layout: default
     {% endif %}
     {% if page.format %}
     <div class="post-tags">
-      <span class="format-badge format-{{ page.format | downcase }}">{{ page.format | replace: '-', ' ' }}</span>
+      <a class="format-badge format-{{ page.format | downcase }}" href="{{ '/blog/' | relative_url }}?format={{ page.format | downcase | url_encode }}">{{ page.format | replace: '-', ' ' }}</a>
     </div>
     {% endif %}
     {% if page.categories %}
