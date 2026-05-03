@@ -37,16 +37,9 @@ subscribe: true
 <div class="filter-row filter-row-center" id="format-filters">
   <span class="filter-label">Type:</span>
   <div class="filter-tags">
-  {% assign all_formats = "" | split: "" %}
-  {% for post in site.posts %}
-    {% if post.type == 'blog' and post.format %}
-      {% assign all_formats = all_formats | push: post.format %}
-    {% endif %}
-  {% endfor %}
-  {% assign unique_formats = all_formats | uniq | sort %}
-  {% for fmt in unique_formats %}
-    <button class="fmt-filter-btn format-badge format-{{ fmt | downcase }}" data-format="{{ fmt | downcase }}">{{ fmt | replace: '-', ' ' }}</button>
-  {% endfor %}
+    <button class="fmt-filter-btn format-badge format-essay" data-format="essay">Essay</button>
+    <button class="fmt-filter-btn format-badge format-tutorial" data-format="tutorial">Tutorial</button>
+    <button class="fmt-filter-btn format-badge format-deep-dive" data-format="deep-dive">Deep Dive</button>
   </div>
 </div>
 
