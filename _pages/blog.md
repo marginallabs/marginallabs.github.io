@@ -34,7 +34,9 @@ subscribe: true
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
 
-<div class="format-filters" id="format-filters">
+<div class="filter-row" id="format-filters">
+  <span class="filter-label">Type:</span>
+  <div class="filter-tags">
   {% assign all_formats = "" | split: "" %}
   {% for post in site.posts %}
     {% if post.type == 'blog' and post.format %}
@@ -43,11 +45,14 @@ subscribe: true
   {% endfor %}
   {% assign unique_formats = all_formats | uniq | sort %}
   {% for fmt in unique_formats %}
-    <button class="fmt-filter-btn" data-format="{{ fmt | downcase }}">{{ fmt | replace: '-', ' ' }}</button>
+    <button class="fmt-filter-btn format-badge format-{{ fmt | downcase }}" data-format="{{ fmt | downcase }}">{{ fmt | replace: '-', ' ' }}</button>
   {% endfor %}
+  </div>
 </div>
 
-<div class="category-filters" id="category-filters">
+<div class="filter-row" id="category-filters">
+  <span class="filter-label">Categories:</span>
+  <div class="filter-tags">
   {% assign all_categories = "" | split: "" %}
   {% for post in site.posts %}
     {% if post.type == 'blog' %}
@@ -61,6 +66,7 @@ subscribe: true
     <button class="cat-filter-btn" data-category="{{ cat | downcase }}">{{ cat }}</button>
   {% endfor %}
   <button class="cat-filter-btn cat-more-toggle" id="cat-more-toggle">More...</button>
+  </div>
 </div>
 
 <div id="post-list">
