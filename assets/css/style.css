@@ -849,7 +849,7 @@ mark.search-highlight {
 /* --- Filter Rows --- */
 .filter-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -858,7 +858,6 @@ mark.search-highlight {
   font-size: 0.8rem;
   color: var(--color-text-light);
   white-space: nowrap;
-  padding-top: 0.25em;
 }
 .filter-tags {
   display: flex;
