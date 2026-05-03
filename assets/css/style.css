@@ -849,7 +849,7 @@ mark.search-highlight {
 /* --- Filter Rows --- */
 .filter-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -858,6 +858,7 @@ mark.search-highlight {
   font-size: 0.8rem;
   color: var(--color-text-light);
   white-space: nowrap;
+  line-height: 1.85;
 }
 .filter-tags {
   display: flex;
@@ -875,8 +876,29 @@ mark.search-highlight {
   text-transform: capitalize;
   background: transparent;
 }
-.fmt-filter-btn.active {
-  color: #fff !important;
+.fmt-filter-btn.format-essay.active {
+  background: #2e7d32;
+  color: #fff;
+}
+.fmt-filter-btn.format-tutorial.active {
+  background: #1565c0;
+  color: #fff;
+}
+.fmt-filter-btn.format-deep-dive.active {
+  background: #7b1fa2;
+  color: #fff;
+}
+[data-theme="dark"] .fmt-filter-btn.format-essay.active {
+  background: #66bb6a;
+  color: #1a1a1a;
+}
+[data-theme="dark"] .fmt-filter-btn.format-tutorial.active {
+  background: #64b5f6;
+  color: #1a1a1a;
+}
+[data-theme="dark"] .fmt-filter-btn.format-deep-dive.active {
+  background: #ce93d8;
+  color: #1a1a1a;
 }
 .post-footer { margin-top: 2em; }
 .post-abstract {
