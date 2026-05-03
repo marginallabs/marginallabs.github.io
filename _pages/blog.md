@@ -34,7 +34,7 @@ subscribe: true
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
 
-<div class="filter-row" id="format-filters">
+<div class="filter-row filter-row-center" id="format-filters">
   <span class="filter-label">Type:</span>
   <div class="filter-tags">
   {% assign all_formats = "" | split: "" %}

@@ -859,7 +859,12 @@ mark.search-highlight {
   font-weight: 600;
   color: var(--color-text-light);
   white-space: nowrap;
-  line-height: 1.85;
+}
+.filter-row-center {
+  align-items: center;
+}
+.filter-row-center .filter-label {
+  line-height: 1;
 }
 .filter-tags {
   display: flex;
