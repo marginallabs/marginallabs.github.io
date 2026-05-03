@@ -24,6 +24,11 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
+    {% if page.format %}
+    <div class="post-tags">
+      <span class="format-badge format-{{ page.format | downcase }}">{{ page.format | replace: '-', ' ' }}</span>
+    </div>
+    {% endif %}
     {% if page.categories %}
     <div class="post-tags">
       {% for cat in page.categories %}

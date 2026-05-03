@@ -34,6 +34,19 @@ subscribe: true
 
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
 
+<div class="format-filters" id="format-filters">
+  {% assign all_formats = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.type == 'blog' and post.format %}
+      {% assign all_formats = all_formats | push: post.format %}
+    {% endif %}
+  {% endfor %}
+  {% assign unique_formats = all_formats | uniq | sort %}
+  {% for fmt in unique_formats %}
+    <button class="fmt-filter-btn" data-format="{{ fmt | downcase }}">{{ fmt | replace: '-', ' ' }}</button>
+  {% endfor %}
+</div>
+
 <div class="category-filters" id="category-filters">
   {% assign all_categories = "" | split: "" %}
   {% for post in site.posts %}
@@ -54,13 +67,13 @@ subscribe: true
 {% for post in site.posts %}
   {% if post.type == 'blog' %}
   {% assign w = post.content | strip_html | split: " " | size %}{% assign rt = w | divided_by: 200 | at_least: 1 %}
-  <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-reading-time="{{ rt }}">
+  <article class="blog-list-item" data-title="{{ post.title | downcase }}" data-categories="{{ post.categories | join: ',' | downcase }}" data-excerpt="{{ post.abstract | default: post.excerpt | strip_html | downcase }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-reading-time="{{ rt }}" data-format="{{ post.format | downcase }}">
     <span class="post-date">{{ post.date | date: "%B %d, %Y" }} &middot; {{ rt }} min read</span>
     <div class="post-title-row">
       {% if post.image %}<a href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.image | relative_url }}" alt="Thumbnail for {{ post.title }}" /></a>{% endif %}
       <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </div>
-    {% if post.categories %}<span class="post-category-badges">{% if post.categories.size <= 5 %}{% for cat in post.categories %}<span class="category-tag">{{ cat }}</span>{% endfor %}{% else %}{% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}</span>{% endif %}
+    {% if post.format %}<span class="format-badge format-{{ post.format | downcase }}">{{ post.format | replace: '-', ' ' }}</span>{% endif %}{% if post.categories %}<span class="post-category-badges">{% if post.categories.size <= 5 %}{% for cat in post.categories %}<span class="category-tag">{{ cat }}</span>{% endfor %}{% else %}{% for cat in post.categories limit:4 %}<span class="category-tag">{{ cat }}</span>{% endfor %}<span class="category-tag category-more-toggle" onclick="this.parentElement.querySelectorAll('.category-tag.hidden-tag').forEach(function(t){t.classList.remove('hidden-tag');}); this.style.display='none';">More...</span>{% for cat in post.categories offset:4 %}<span class="category-tag hidden-tag">{{ cat }}</span>{% endfor %}{% endif %}</span>{% endif %}
     {% if post.abstract %}
       <p class="post-excerpt">{{ post.abstract | truncatewords: 30 }}</p>
     {% endif %}
@@ -90,6 +103,7 @@ subscribe: true
   var paginationEl = document.getElementById('pagination');
   var buttons = document.querySelectorAll('.cat-filter-btn:not(.cat-more-toggle)');
   var activeCategories = [];
+  var activeFormat = '';
   var currentPage = 1;
 
   // Category expand/collapse
@@ -192,7 +206,9 @@ subscribe: true
       var combined = title + ' ' + excerpt + ' ' + cats.join(' ');
       var textMatch = !hasQuery || textMatches(combined, parsed);
       var catMatch = activeCategories.length === 0 || activeCategories.every(function(c) { return cats.indexOf(c) !== -1; });
-      if (textMatch && catMatch) {
+      var fmt = item.getAttribute('data-format') || '';
+      var formatMatch = !activeFormat || fmt === activeFormat;
+      if (textMatch && catMatch && formatMatch) {
         var score = hasQuery ? relevanceScore(combined, parsed) : 0;
         results.push({ item: item, score: score, date: item.getAttribute('data-date'), rt: parseInt(item.getAttribute('data-reading-time')) || 1 });
       }
@@ -231,7 +247,7 @@ subscribe: true
     if (hasQuery) { resultCount.textContent = totalFound + ' of ' + items.length + ' posts found'; resultCount.style.display = ''; }
     else { resultCount.style.display = 'none'; }
 
-    noResults.style.display = (totalFound === 0 && (hasQuery || activeCategories.length > 0)) ? '' : 'none';
+    noResults.style.display = (totalFound === 0 && (hasQuery || activeCategories.length > 0 || activeFormat)) ? '' : 'none';
     clear.style.display = q ? 'block' : 'none';
 
     renderPagination(totalFound);
@@ -239,6 +255,7 @@ subscribe: true
     // URL state
     var params = new URLSearchParams();
     if (q) params.set('q', q);
+    if (activeFormat) params.set('format', activeFormat);
     if (activeCategories.length > 0) params.set('cats', activeCategories.join(','));
     if (sortSelect.value !== 'default') params.set('sort', sortSelect.value);
     if (perPageSelect.value !== '5') params.set('per_page', perPageSelect.value);
@@ -262,6 +279,17 @@ subscribe: true
       var idx = activeCategories.indexOf(cat);
       if (idx === -1) { activeCategories.push(cat); this.classList.add('active'); }
       else { activeCategories.splice(idx, 1); this.classList.remove('active'); }
+      currentPage = 1;
+      search();
+    });
+  });
+
+  var fmtButtons = document.querySelectorAll('.fmt-filter-btn');
+  fmtButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var fmt = this.getAttribute('data-format');
+      if (activeFormat === fmt) { activeFormat = ''; this.classList.remove('active'); }
+      else { activeFormat = fmt; fmtButtons.forEach(function(b) { b.classList.remove('active'); }); this.classList.add('active'); }
       currentPage = 1;
       search();
     });
@@ -294,6 +322,10 @@ subscribe: true
   // Restore from URL (takes priority) then localStorage
   var params = new URLSearchParams(window.location.search);
   if (params.get('q')) input.value = params.get('q');
+  if (params.get('format')) {
+    activeFormat = params.get('format');
+    fmtButtons.forEach(function(btn) { if (btn.getAttribute('data-format') === activeFormat) btn.classList.add('active'); });
+  }
   if (params.get('cats')) {
     params.get('cats').split(',').forEach(function(cat) {
       activeCategories.push(cat);
