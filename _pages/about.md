@@ -12,9 +12,9 @@ The name comes from the concept of *thinking at the margin*: the idea that decis
 
 Expect a mix of content across three broad areas:
 
-- **Essays** — Applying various economic theories to everyday problems
-- **Tutorials** — Demystifying regression, experiments, and how economists actually draw conclusions
-- **Deep dive** — Thoughtful explorations of theory, philosophy, and the occasional puzzle that makes you rethink what you know
+- [**Essays**]({{ '/blog/' | relative_url }}?format=essay) — Applying various economic theories to everyday problems
+- [**Tutorials**]({{ '/blog/' | relative_url }}?format=tutorial) — Demystifying regression, experiments, and how economists actually draw conclusions
+- [**Deep Dives**]({{ '/blog/' | relative_url }}?format=deep-dive) — Thoughtful explorations of theory, philosophy, and the occasional puzzle that makes you rethink what you know
 
 ## Contacts
 
