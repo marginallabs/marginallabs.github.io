@@ -24,12 +24,12 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
-    {% if page.format %}
+    {% if page.format and page.type != 'news' %}
     <div class="post-tags">
       <a class="format-badge format-{{ page.format | downcase }}" href="{{ '/blog/' | relative_url }}?format={{ page.format | downcase | url_encode }}">{{ page.format | replace: '-', ' ' }}</a>
     </div>
     {% endif %}
-    {% if page.categories %}
+    {% if page.categories and page.type != 'news' %}
     <div class="post-tags">
       {% for cat in page.categories %}
         <a class="category-tag" href="{{ page.type | default: 'blog' | prepend: '/' | append: '/' | relative_url }}?cats={{ cat | downcase | url_encode }}">{{ cat }}</a>
