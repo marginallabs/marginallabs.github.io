@@ -29,7 +29,7 @@ We accept submissions in two ways:
 
 Already have a completed draft? Send it straight to us.
 
-1. **Send your draft** — Email your complete article to [marginallab@proton.me](mailto:marginallab@proton.me) with the subject line **Guest Post: [Your Title]**. Include a short author bio and any links you would like included. Copy and paste the template below to get started:
+1. **Send your draft** — Email your complete article to [marginallab@proton.me](mailto:marginallab@proton.me) with the subject line **Guest Post: [Your Title]**. Copy and paste the template below to get started:
 
 ```
 Hi Marginal Lab,
