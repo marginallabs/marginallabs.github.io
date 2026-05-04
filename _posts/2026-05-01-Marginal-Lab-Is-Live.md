@@ -4,7 +4,6 @@ title: "Marginal Lab Is Live"
 description: "Marginal Lab has officially launched. Check out what we offer!"
 date: 2026-05-01
 last_modified_at: 2026-05-01
-categories: [launch, features]
 type: news
 permalink: /news/:title/
 abstract: "Marginal Lab has officially launched. Check out what we offer!"
@@ -41,4 +40,5 @@ A few things worth knowing as a reader:
 
 ## What Is Next
 
-Check our first post [here](/blog/The-Fallacy-of-Exhaustive-Effort/)! More posts are on the way... If you have a topic you would like to see covered, feel free to reach out at [marginallab@proton.me](mailto:marginallab@proton.me).
+Check our first post [here](/blog/The-Fallacy-of-Exhaustive-Effort/)! More posts are on the way...
+If you have a topic you would like to see covered, feel free to reach out at [marginallab@proton.me](mailto:marginallab@proton.me).
