@@ -214,6 +214,9 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   opacity: 1;
   transform: translateY(0);
 }
+.fade-in.visible mjx-container {
+  opacity: 1;
+}
 
 /* --- Home Hero --- */
 .home-hero {

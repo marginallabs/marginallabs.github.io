@@ -249,6 +249,9 @@
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
+            if (window.MathJax && window.MathJax.typesetPromise) {
+              window.MathJax.typesetPromise([entry.target]).catch(function(){});
+            }
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
