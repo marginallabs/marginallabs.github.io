@@ -75,6 +75,7 @@
             c.parentNode.insertBefore(wrap, c);
             wrap.appendChild(c);
           });
+          if (typeof window.initFadeIn === 'function') window.initFadeIn();
         });
       }
     }
@@ -226,7 +227,7 @@
   }
 
   // Scroll fade-in for sections
-  (function() {
+  window.initFadeIn = function() {
     var targets = [];
     document.querySelectorAll('.post-content, .page-content .page, .home .recent-posts, .home-hero').forEach(function(container) {
       if (!container) return;
@@ -241,9 +242,6 @@
     });
     targets.forEach(function(el) {
           if (el.matches('.page-title-row, .section-title-row, .lab-icon, .lab-title, .lab-tagline, .lab-description, .home-hero, .post-title, .post-header')) return;
-          var html = el.innerHTML || '';
-          if (html.indexOf('$') !== -1 || html.indexOf('\\(') !== -1 || html.indexOf('\\[') !== -1) return;
-          if (el.querySelector('mjx-container, .math-scroll')) return;
           el.classList.add('fade-in');
         });
     if ('IntersectionObserver' in window) {
@@ -259,7 +257,9 @@
     } else {
       targets.forEach(function(el) { el.classList.add('visible'); });
     }
-  })();
+  };
+  // Run immediately on non-post pages; on post pages MathJax will call initFadeIn after rendering
+  if (!document.querySelector('.post-content')) window.initFadeIn();
 
   // Reading progress bar (posts only)
   (function() {
