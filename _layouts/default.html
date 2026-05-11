@@ -241,6 +241,9 @@
     });
     targets.forEach(function(el) {
           if (el.matches('.page-title-row, .section-title-row, .lab-icon, .lab-title, .lab-tagline, .lab-description, .home-hero, .post-title, .post-header')) return;
+          var html = el.innerHTML || '';
+          if (html.indexOf('$') !== -1 || html.indexOf('\\(') !== -1 || html.indexOf('\\[') !== -1) return;
+          if (el.querySelector('mjx-container, .math-scroll')) return;
           el.classList.add('fade-in');
         });
     if ('IntersectionObserver' in window) {
@@ -249,9 +252,6 @@
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
-            if (window.MathJax && window.MathJax.typesetPromise) {
-              window.MathJax.typesetPromise([entry.target]).catch(function(){});
-            }
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
