@@ -42,7 +42,9 @@
     "description": {{ page.description | default: site.description | jsonify }},
     {% if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif %}
     "author": {"@type": "Organization", "name": {{ site.title | jsonify }}},
-    "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}, "logo": {"@type": "ImageObject", "url": {{ '/assets/img/marginallab.png' | absolute_url | jsonify }}}},{% else %}"@type": "WebPage",
+    "publisher": {"@type": "Organization", "name": {{ site.title | jsonify }}, "logo": {"@type": "ImageObject", "url": {{ '/assets/img/marginallab.png' | absolute_url | jsonify }}}},{% elsif page.url == '/' %}"@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "alternateName": "Marginal Lab",{% else %}"@type": "WebPage",
     "name": {{ page.title | default: site.title | jsonify }},
     "description": {{ page.description | default: site.description | jsonify }},{% endif %}
     "url": {{ page.url | absolute_url | jsonify }},
