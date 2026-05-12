@@ -35,7 +35,7 @@ subscribe: true
 <span class="search-result-count" id="search-result-count" style="display:none;"></span>
 
 <div class="filter-row filter-row-center" id="format-filters">
-  <span class="filter-label">Type:</span>
+  <span class="filter-label">Format:</span>
   <div class="filter-tags">
     <button class="fmt-filter-btn format-badge format-essay" data-format="essay">Essay</button>
     <button class="fmt-filter-btn format-badge format-tutorial" data-format="tutorial">Tutorial</button>
