@@ -190,6 +190,11 @@ th { background: var(--color-bg-alt); font-family: var(--font-heading); font-wei
   gap: 0.6em;
   flex-shrink: 0;
 }
+.sidebar-actions {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
 .sidebar-contact {
   display: flex;
   align-items: center;
