@@ -1034,6 +1034,10 @@ img.figure-img {
   color: rgba(255,255,255,0.6);
 }
 .sidebar .theme-toggle:hover { color: #fff; }
+.sidebar .subscribe-icon {
+  color: rgba(255,255,255,0.6);
+}
+.sidebar .subscribe-icon:hover { color: #fff; }
 
 /* --- Hamburger Toggle (mobile only) --- */
 .sidebar-toggle {
