@@ -992,6 +992,22 @@ img.figure-img {
 }
 
 /* --- Dark Mode Toggle --- */
+.subscribe-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  border-bottom: none !important;
+  padding: 0.3em;
+  line-height: 1;
+}
+.subscribe-icon:hover {
+  color: var(--color-accent);
+}
+.subscribe-icon svg {
+  width: 20px;
+  height: 20px;
+}
 .theme-toggle {
   background: none;
   border: none;
